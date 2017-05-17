@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Common", "0 Common", "{E19D6B8E-CB0B-4F41-9529-2A42F78A55BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Presenatation", "1 Presenatation", "{FEEE388C-7377-416B-9CA7-5D3ECD899B6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Service", "2 Service", "{E4FD3543-51FC-4080-8943-E06185D5B1CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.Models", "OpenQbit.Insurance.Common.Models\OpenQbit.Insurance.Common.Models.csproj", "{DC9F0658-9119-4914-B244-0F4128ACE8EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC9F0658-9119-4914-B244-0F4128ACE8EE} = {E19D6B8E-CB0B-4F41-9529-2A42F78A55BD}
+	EndGlobalSection
+EndGlobal
