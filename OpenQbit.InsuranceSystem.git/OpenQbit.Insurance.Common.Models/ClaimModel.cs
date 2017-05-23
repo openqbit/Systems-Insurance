@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class ClaimModel
+    public class ClaimModel
     {
+        public int ID { get; set; }
+        public double ClaimValue { get; set; }
+        public double EstimatedDamage { get; set; }
+        public String Note { get; set; }
+
+        public int PolicyCoverageDetailModelID { get; set; }
+
+        public virtual PolicyCoverageDetailModel PolicyCoverageDetail { get; set; }
+        public virtual AccidentValueEstimationModel AccidentValueEstimation { get; set; }
     }
 }
