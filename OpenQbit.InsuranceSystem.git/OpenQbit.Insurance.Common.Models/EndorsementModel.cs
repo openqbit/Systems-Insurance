@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class EndorsementModel
+    public class EndorsementModel
     {
+        public int ID { get; set; }
+        public string Details { get; set; }
+
+        //public virtual PolicyCoverageDetailModel PolicyCoverageDetail { get; set; }
     }
 }
