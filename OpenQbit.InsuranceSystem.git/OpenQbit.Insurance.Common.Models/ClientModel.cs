@@ -30,5 +30,7 @@ namespace OpenQbit.Insurance.Common.Models
         public string Email { get; set; }
         public int Mobile { get; set; }
         public int Telephone { get; set; }
+
+        //public virtual ICollection<InsuranceModel> InsuranceList { get; set; }
     }
 }

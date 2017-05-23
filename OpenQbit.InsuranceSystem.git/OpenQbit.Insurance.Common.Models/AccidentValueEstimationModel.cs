@@ -16,6 +16,6 @@ namespace OpenQbit.Insurance.Common.Models
         public ICollection<String> DamagedParts { get; set; }
 
         public int ClaimModelID { get; set; }
-        //public virtual ClaimModel Claim { get; set; }
+        public virtual ClaimModel Claim { get; set; }
     }
 }
