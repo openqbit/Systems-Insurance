@@ -15,7 +15,7 @@ namespace OpenQbit.Insurance.Common.Models
 
         public int PolicyCoverageDetailModelID { get; set; }
 
-        public virtual PolicyCoverageDetailModel PolicyCoverageDetail { get; set; }
-        public virtual AccidentValueEstimationModel AccidentValueEstimation { get; set; }
+        //public virtual PolicyCoverageDetailModel PolicyCoverageDetail { get; set; }
+        //public virtual AccidentValueEstimationModel AccidentValueEstimation { get; set; }
     }
 }
