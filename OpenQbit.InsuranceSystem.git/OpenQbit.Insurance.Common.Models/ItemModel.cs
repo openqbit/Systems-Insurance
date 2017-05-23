@@ -12,8 +12,9 @@ namespace OpenQbit.Insurance.Common.Models
         public string Brand { get; set; }
         public string Name { get; set; }
         public double Value { get; set; }
+        public int PolicyCoverageDetailID { get; set; }
 
-       // public virtual PolicyCoverageDetailModel PolicyCoverageDetail { get; set; }
+        public virtual PolicyCoverageDetailModel PolicyCoverageDetail { get; set; }
 
     }
 }
