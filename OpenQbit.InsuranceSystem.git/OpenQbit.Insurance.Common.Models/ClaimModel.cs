@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Test comment
 namespace OpenQbit.Insurance.Common.Models
 {
     public class ClaimModel
