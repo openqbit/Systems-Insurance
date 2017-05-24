@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-//Test comment
-namespace OpenQbit.Insurance.Common.Models
+namespace OpenQbit.Insurance.Service.WebApi.Models.API
 {
-    public class PaymentModel
+    public class ApiPaymentModel
     {
         public int ID { get; set; }
         public double Amount { get; set; }
@@ -15,6 +13,5 @@ namespace OpenQbit.Insurance.Common.Models
 
         public int PolicyCoverageDetailID { get; set; }
 
-        public virtual PolicyCoverageDetailModel PolicyCoverageDetail { get; set; }
     }
 }
