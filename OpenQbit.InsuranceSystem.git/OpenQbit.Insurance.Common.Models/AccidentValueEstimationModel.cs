@@ -13,7 +13,7 @@ namespace OpenQbit.Insurance.Common.Models
         public int ID { get; set; }
         public String Reason { get; set; }
         public double CostOfDamage { get; set; }
-        public ICollection<String> DamagedParts { get; set; }
+        public List<String> DamagedParts { get; set; }
 
         public int ClaimModelID { get; set; }
         public virtual ClaimModel Claim { get; set; }
