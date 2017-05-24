@@ -10,6 +10,6 @@ namespace OpenQbit.Insurance.Service.WebApi.Models.API
         public int ID { get; set; }
         public string Reason { get; set; }
         public double CostOfDamage { get; set; }
-        public ICollection<String> DamagedParts { get; set; }
+        public List<String> DamagedParts { get; set; }
     }
 }
