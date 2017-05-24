@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 BLL", "3 BLL", "{573A1D25-DA26-43FD-ABF2-7CB3E6E7EA23}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 DAL", "4 DAL", "{C335055B-B610-4FAE-BFE9-24A35330D5C5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 DataAccess", "4 DataAccess", "{C335055B-B610-4FAE-BFE9-24A35330D5C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Service.WebApi", "OpenQbit.Insurance.Service.WebApi\OpenQbit.Insurance.Service.WebApi.csproj", "{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}"
 EndProject
