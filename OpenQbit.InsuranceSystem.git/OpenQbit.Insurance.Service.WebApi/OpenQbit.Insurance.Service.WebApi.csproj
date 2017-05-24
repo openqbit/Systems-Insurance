@@ -208,6 +208,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\AgentController.cs" />
     <Compile Include="Controllers\API\ClientController.cs" />
+    <Compile Include="Controllers\API\InsuranceController.cs" />
+    <Compile Include="Controllers\API\PolicyCoverageDetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,7 +219,8 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\API\ApiAgentModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
-    <Compile Include="Models\API\ApiPaymentModel.cs" />
+    <Compile Include="Models\API\ApiInsurance.cs" />
+    <Compile Include="Models\API\ApiPolicyCoverageDetailModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -281,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PolicyCoverageDetail\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
