@@ -25,8 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Test", "5 Test", "{5F2A67
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Test1", "OpenQbit.Insurance.Test1\OpenQbit.Insurance.Test1.csproj", "{56762376-4DF7-48A4-9408-C2B9C341F29E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OpenQbit.Insurance.Presentation.Test", "OpenQbit.Insurance.Presentation.Test\OpenQbit.Insurance.Presentation.Test.xproj", "{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,14 +51,6 @@ Global
 		{56762376-4DF7-48A4-9408-C2B9C341F29E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56762376-4DF7-48A4-9408-C2B9C341F29E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56762376-4DF7-48A4-9408-C2B9C341F29E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,7 +61,5 @@ Global
 		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F} = {573A1D25-DA26-43FD-ABF2-7CB3E6E7EA23}
 		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C} = {573A1D25-DA26-43FD-ABF2-7CB3E6E7EA23}
 		{56762376-4DF7-48A4-9408-C2B9C341F29E} = {5F2A6742-AEA0-4010-B2E3-3E0AA3F29343}
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A} = {E4FD3543-51FC-4080-8943-E06185D5B1CD}
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50} = {E4FD3543-51FC-4080-8943-E06185D5B1CD}
 	EndGlobalSection
 EndGlobal
