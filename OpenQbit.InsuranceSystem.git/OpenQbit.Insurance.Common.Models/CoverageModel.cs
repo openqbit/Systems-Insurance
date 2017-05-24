@@ -9,11 +9,12 @@ namespace OpenQbit.Insurance.Common.Models
     public class CoverageModel
     {
         public int ID { get; set; }
-        public String Conditions { get; set; }
         public String CoverageType { get; set; }
         public String Includes { get; set; }
+        public String Conditions { get; set; }
 
         public virtual PolicyTypeModel PolicyTypes { get; set; }
-        public virtual PolicyCoverageDetailModel PolicyCoverageDetails { get; set; }
+        //public virtual PolicyCoverageDetailsModel PolicyCoverageDetails { get; set; }
+        
     }
 }
