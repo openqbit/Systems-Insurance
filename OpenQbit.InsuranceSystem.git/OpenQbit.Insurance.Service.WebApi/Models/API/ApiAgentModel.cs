@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace OpenQbit.Insurance.Common.Models
+namespace OpenQbit.Insurance.Service.WebApi.Models.API
 {
-    public class AgentModel
+    public class ApiAgentModel
     {
         public int ID { get; set; }
         public string First_Name { get; set; }
@@ -17,7 +16,5 @@ namespace OpenQbit.Insurance.Common.Models
         public string Email { get; set; }
         public int Mobile { get; set; }
         public int Telephone { get; set; }
-
-        //public virtual ICollection<InsuranceModel> InsuranceList { get; set; }
     }
 }
