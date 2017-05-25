@@ -215,6 +215,7 @@
     <Compile Include="Controllers\API\EndorsementController.cs" />
     <Compile Include="Controllers\API\ItemController.cs" />
     <Compile Include="Controllers\API\PaymentController.cs" />
+    <Compile Include="Controllers\API\PolicyTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -227,6 +228,7 @@
     <Compile Include="Models\API\ApiEndorsementModel.cs" />
     <Compile Include="Models\API\ApiAgentModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
+    <Compile Include="Models\API\ApiPolicyTypeModel.cs" />
     <Compile Include="Models\API\ApiInsurance.cs" />
     <Compile Include="Models\API\ApiItemModel.cs" />
     <Compile Include="Models\API\ApiPaymentModel.cs" />
