@@ -52,7 +52,6 @@
     <Compile Include="PolicyCoverageDetailModel.cs" />
     <Compile Include="PolicyTypeModel.cs" />
     <Compile Include="DocumentModel.cs" />
-    <Compile Include="Insurance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

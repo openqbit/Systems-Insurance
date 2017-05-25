@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class DocumentModel
+    public class DocumentModel
     {
         public int ID { get; set; }
         public int InsuranceID { get; set; }
