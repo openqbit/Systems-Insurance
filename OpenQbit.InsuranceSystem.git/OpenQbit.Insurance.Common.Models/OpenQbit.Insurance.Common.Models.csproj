@@ -46,11 +46,12 @@
     <Compile Include="ClientModel.cs" />
     <Compile Include="CoverageModel.cs" />
     <Compile Include="EndorsementModel.cs" />
+    <Compile Include="InsuranceModel.cs" />
     <Compile Include="ItemModel.cs" />
     <Compile Include="PaymentModel.cs" />
     <Compile Include="PolicyCoverageDetailModel.cs" />
     <Compile Include="PolicyTypeModel.cs" />
-    <Compile Include="Document.cs" />
+    <Compile Include="DocumentModel.cs" />
     <Compile Include="Insurance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

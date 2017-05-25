@@ -212,11 +212,10 @@
     <Compile Include="Controllers\API\ClientController.cs" />
     <Compile Include="Controllers\API\InsuranceController.cs" />
     <Compile Include="Controllers\API\PolicyCoverageDetailController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\API\EndorsementController.cs" />
     <Compile Include="Controllers\API\ItemController.cs" />
     <Compile Include="Controllers\API\PaymentController.cs" />
-    <Compile Include="Controllers\API\HomeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -18,6 +18,6 @@ namespace OpenQbit.Insurance.Common.Models
         public int Mobile { get; set; }
         public int Telephone { get; set; }
 
-        //public virtual ICollection<InsuranceModel> InsuranceList { get; set; }
+        public virtual ICollection<InsuranceModel> InsuranceList { get; set; }
     }
 }
