@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace OpenQbit.Insurance.Common.Models
+namespace OpenQbit.Insurance.Service.WebApi.Models.API
 {
     public enum PolicyTypes
     {
-        ReInsurance,Fire,Motor,Life,Marine
+        ReInsurance, Fire, Motor, Life, Marine
     }
 
-    public class PolicyTypeModel
+    public class ApiPolicyTypeModel
     {
+        
         public int ID { get; set; }
         public PolicyTypes Type { get; set; }
         public List<String> Eligibilities { get; set; }
-        public ICollection<CoverageModel> coverages { get; set; }
+        
     }
-
-
 }
