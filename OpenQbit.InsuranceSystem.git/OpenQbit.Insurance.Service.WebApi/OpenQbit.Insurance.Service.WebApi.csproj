@@ -223,6 +223,7 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\API\ApiEndorsementModel.cs" />
     <Compile Include="Models\API\ApiAgentModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
