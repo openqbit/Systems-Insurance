@@ -21,6 +21,11 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
+        public HttpResponseMessage DeleteAVE(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
         public ApiAccidentValueEstimationModel Get(int? ID)
         {
             List<String> damagePartsList = new List<string>();
