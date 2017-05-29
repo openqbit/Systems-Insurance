@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace OpenQbit.Insurance.Common.Models
+namespace OpenQbit.Insurance.Service.WebApi.Models.API
 {
-    public class DocumentModel
+    public class ApiDocumentModel
     {
         public int ID { get; set; }
         public int InsuranceID { get; set; }
         public bool Authuorization { get; set; }
         public byte[] Document { get; set; }
-        public virtual ICollection<InsuranceModel> Insurance { get; set; }
     }
 }
