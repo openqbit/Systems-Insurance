@@ -12,6 +12,6 @@ namespace OpenQbit.Insurance.Common.Models
         public int InsuranceID { get; set; }
         public String Authuerisation { get; set; }
         public int Copy { get; set; }
-        public virtual ICollection<Insurance> Insurance { get; set; }
+        public virtual ICollection<InsuranceModel> Insurance { get; set; }
     }
 }

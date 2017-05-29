@@ -10,6 +10,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers
 {
     public class AgentController : ApiController
     {
+        //POST
         public bool Add(ApiAgentModel agent)
         {
             return true;

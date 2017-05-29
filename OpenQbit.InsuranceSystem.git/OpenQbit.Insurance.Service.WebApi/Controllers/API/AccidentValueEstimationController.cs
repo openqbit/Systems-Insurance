@@ -11,14 +11,14 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class AccidentValueEstimationController : ApiController
     {
-        public bool Add(ApiAccidentValueEstimationModel accident)
+        public HttpResponseMessage PostAVE(ApiAccidentValueEstimationModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiAccidentValueEstimationModel accident)
+        public HttpResponseMessage PutAVE(ApiAccidentValueEstimationModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiAccidentValueEstimationModel Get(int? ID)
@@ -32,13 +32,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
                 Reason = "Wet Weather",
                 CostOfDamage = 20000,
                 DamagedParts = new List<string>(damagePartsList),
-
-
-
-
-
-
-
+                
             };
             return accident;
 
