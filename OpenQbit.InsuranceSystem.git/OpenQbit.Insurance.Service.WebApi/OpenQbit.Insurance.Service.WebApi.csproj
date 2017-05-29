@@ -231,7 +231,7 @@
     <Compile Include="Models\API\ApiAgentModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
     <Compile Include="Models\API\ApiPolicyTypeModel.cs" />
-    <Compile Include="Models\API\ApiInsurance.cs" />
+    <Compile Include="Models\API\ApiInsuranceModel.cs" />
     <Compile Include="Models\API\ApiItemModel.cs" />
     <Compile Include="Models\API\ApiPaymentModel.cs" />
     <Compile Include="Models\API\ApiPolicyCoverageDetailModel.cs" />

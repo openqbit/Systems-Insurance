@@ -10,14 +10,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class EndorsementController : ApiController
     {
-        public bool Add(ApiEndorsementModel endorsement)
+        public HttpResponseMessage Post(ApiEndorsementModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiEndorsementModel endorsement)
+        public HttpResponseMessage Put(ApiEndorsementModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public HttpResponseMessage Delete(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiEndorsementModel Get(int? ID)

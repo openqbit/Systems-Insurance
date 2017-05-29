@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 
@@ -9,14 +11,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class CoverageController : ApiController
     {
-        public bool Add(ApiCoverageModel coverage)
+        public HttpResponseMessage Post(ApiCoverageModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiCoverageModel coverage)
+        public HttpResponseMessage Put(ApiCoverageModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public HttpResponseMessage Delete(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiCoverageModel Get(int? ID)

@@ -11,14 +11,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class ClaimController : ApiController
     {
-        public bool Add(ApiClaimModel claim)
+        public HttpResponseMessage Post(ApiClaimModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiClaimModel claim)
+        public HttpResponseMessage Put(ApiClaimModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public HttpResponseMessage Delete(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiClaimModel Get(int? ID)

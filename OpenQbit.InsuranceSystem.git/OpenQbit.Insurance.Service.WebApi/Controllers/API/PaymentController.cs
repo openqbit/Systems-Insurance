@@ -10,14 +10,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class PaymentController : ApiController
     {
-        public bool Add(ApiPaymentModel payment)
+        public HttpResponseMessage Post(ApiPaymentModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiPaymentModel payment)
+        public HttpResponseMessage Put(ApiPaymentModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public HttpResponseMessage Delete(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiPaymentModel Get(int? ID)

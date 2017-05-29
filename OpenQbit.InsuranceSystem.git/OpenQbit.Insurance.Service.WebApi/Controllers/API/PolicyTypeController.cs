@@ -10,14 +10,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class PolicyTypeController : ApiController
     {
-        public bool Add(ApiPolicyTypeModel policyType)
+        public HttpResponseMessage Post(ApiPolicyTypeModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiPolicyTypeModel policyType)
+        public HttpResponseMessage Put(ApiPolicyTypeModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public HttpResponseMessage Delete(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiPolicyTypeModel Get(int? ID)

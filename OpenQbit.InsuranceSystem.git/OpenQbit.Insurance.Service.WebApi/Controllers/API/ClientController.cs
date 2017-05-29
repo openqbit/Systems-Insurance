@@ -10,14 +10,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class ClientController : ApiController
     {
-        public bool Add(ApiClientModel client)
+        public HttpResponseMessage Post(ApiClientModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiClientModel client)
+        public HttpResponseMessage Put(ApiClientModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public HttpResponseMessage Delete(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiClientModel Get(int? ID)

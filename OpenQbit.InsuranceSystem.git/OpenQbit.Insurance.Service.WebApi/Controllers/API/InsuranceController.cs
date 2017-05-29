@@ -10,19 +10,24 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class InsuranceController : ApiController
     {
-        public bool Add(ApiInsurance insurance)
+        public HttpResponseMessage Post(ApiInsuranceModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiInsurance insurance)
+        public HttpResponseMessage Put(ApiInsuranceModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
-        public ApiInsurance Get(int? ID)
+        public HttpResponseMessage Delete(int? ID)
         {
-            ApiInsurance insurance = new ApiInsurance
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public ApiInsuranceModel Get(int? ID)
+        {
+            ApiInsuranceModel insurance = new ApiInsuranceModel
             {
                 ID = (int)ID,
                 AgentID = 1,
@@ -35,10 +40,10 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             return insurance;
         }
 
-        public List<ApiInsurance> GetList()
+        public List<ApiInsuranceModel> GetList()
         {
-            List<ApiInsurance> InsuranceList = new List<ApiInsurance>();
-            ApiInsurance insurance1 = new ApiInsurance
+            List<ApiInsuranceModel> InsuranceList = new List<ApiInsuranceModel>();
+            ApiInsuranceModel insurance1 = new ApiInsuranceModel
             {
                 ID = 1,
                 AgentID = 1,
@@ -48,7 +53,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
                 Total_Value = 1000000,
             };
             InsuranceList.Add(insurance1);
-            ApiInsurance insurance2 = new ApiInsurance
+            ApiInsuranceModel insurance2 = new ApiInsuranceModel
             {
                 ID = 2,
                 AgentID = 1,

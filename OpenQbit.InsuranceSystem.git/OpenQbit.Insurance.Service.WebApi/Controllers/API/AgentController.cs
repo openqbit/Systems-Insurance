@@ -11,14 +11,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers
     public class AgentController : ApiController
     {
         //POST
-        public bool Add(ApiAgentModel agent)
+        public HttpResponseMessage Post(ApiAgentModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public bool Update(ApiAgentModel agent)
+        public HttpResponseMessage Put(ApiAgentModel accident)
         {
-            return true;
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
+        }
+
+        public HttpResponseMessage Delete(int? ID)
+        {
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiAgentModel Get(int? ID)

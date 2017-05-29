@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OpenQbit.Insurance.Service.WebApi.Models.API
 {
-    public class ApiInsurance
+    public class ApiInsuranceModel
     {
         public int ID { get; set; }
         public int AgentID{get;set;}

@@ -11,17 +11,17 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class AccidentValueEstimationController : ApiController
     {
-        public HttpResponseMessage PostAVE(ApiAccidentValueEstimationModel accident)
+        public HttpResponseMessage Post(ApiAccidentValueEstimationModel accident)
         {
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public HttpResponseMessage PutAVE(ApiAccidentValueEstimationModel accident)
+        public HttpResponseMessage Put(ApiAccidentValueEstimationModel accident)
         {
             return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
-        public HttpResponseMessage DeleteAVE(int? ID)
+        public HttpResponseMessage Delete(int? ID)
         {
             return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
