@@ -49,11 +49,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201705291704583_Insurance-Migration-1.cs" />
+    <Compile Include="Migrations\201705291704583_Insurance-Migration-1.Designer.cs">
+      <DependentUpon>201705291704583_Insurance-Migration-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceDBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenQbit.Insurance.Common.Models\OpenQbit.Insurance.Common.Models.csproj">
+      <Project>{dc9f0658-9119-4914-b244-0f4128ace8ee}</Project>
+      <Name>OpenQbit.Insurance.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Insurance.DataAccess.DAL.Contracts\OpenQbit.Insurance.DataAccess.DAL.Contracts.csproj">
+      <Project>{d569862a-2236-464d-8516-e772d339d52d}</Project>
+      <Name>OpenQbit.Insurance.DataAccess.DAL.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705291704583_Insurance-Migration-1.resx">
+      <DependentUpon>201705291704583_Insurance-Migration-1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

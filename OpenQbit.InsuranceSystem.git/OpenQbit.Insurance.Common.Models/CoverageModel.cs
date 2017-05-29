@@ -14,7 +14,7 @@ namespace OpenQbit.Insurance.Common.Models
         public String Conditions { get; set; }
 
         public virtual PolicyTypeModel PolicyTypes { get; set; }
-        public virtual PolicyCoverageDetailModel PolicyCoverageDetails { get; set; }
+        public virtual ICollection<PolicyCoverageDetailModel> PolicyCoverageDetails { get; set; }
         
     }
 }
