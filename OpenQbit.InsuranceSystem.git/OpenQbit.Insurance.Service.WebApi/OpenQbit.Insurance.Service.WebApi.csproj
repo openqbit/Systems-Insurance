@@ -210,6 +210,7 @@
     <Compile Include="Controllers\API\AgentController.cs" />
     <Compile Include="Controllers\API\ClaimController.cs" />
     <Compile Include="Controllers\API\ClientController.cs" />
+    <Compile Include="Controllers\API\DocumentController.cs" />
     <Compile Include="Controllers\API\InsuranceController.cs" />
     <Compile Include="Controllers\API\PolicyCoverageDetailController.cs" />
     <Compile Include="Controllers\API\EndorsementController.cs" />
@@ -222,6 +223,7 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\API\ApiDocumentModel.cs" />
     <Compile Include="Models\API\ApiEndorsementModel.cs" />
     <Compile Include="Models\API\ApiAgentModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
