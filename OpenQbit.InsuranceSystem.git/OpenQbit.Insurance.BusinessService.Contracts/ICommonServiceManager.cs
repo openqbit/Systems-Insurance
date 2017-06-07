@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace OpenQbit.Insurance.BusinessService.Contracts
 {
-    internal interface ICommonServiceManager
+    public interface ICommonServiceManager
     {
         bool Recored<T>(T obj) where T : class;
         bool Update<T>(T obj) where T : class;

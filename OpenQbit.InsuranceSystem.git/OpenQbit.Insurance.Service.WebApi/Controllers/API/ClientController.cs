@@ -22,7 +22,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
         public HttpResponseMessage Delete(int? ID)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         public ApiClientModel Get(int? ID)
