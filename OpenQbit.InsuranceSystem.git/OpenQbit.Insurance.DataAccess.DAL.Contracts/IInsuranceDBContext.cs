@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.DataAccess.DAL.Contracts
 {
-    public interface IServiceDBContext
+    public interface IInsuranceDBContext
     {
     }
 }

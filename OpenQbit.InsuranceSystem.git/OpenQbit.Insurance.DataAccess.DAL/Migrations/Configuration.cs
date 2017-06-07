@@ -5,14 +5,14 @@ namespace OpenQbit.Insurance.DataAccess.DAL.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<OpenQbit.Insurance.DataAccess.DAL.ServiceDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<OpenQbit.Insurance.DataAccess.DAL.InsuranceDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(OpenQbit.Insurance.DataAccess.DAL.ServiceDBContext context)
+        protected override void Seed(OpenQbit.Insurance.DataAccess.DAL.InsuranceDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

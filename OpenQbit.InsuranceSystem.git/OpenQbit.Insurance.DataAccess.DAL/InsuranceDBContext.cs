@@ -10,9 +10,9 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace OpenQbit.Insurance.DataAccess.DAL
 {
-    class ServiceDBContext : DbContext,IServiceDBContext
+    class InsuranceDBContext : DbContext,IInsuranceDBContext
     {
-        public ServiceDBContext() : base("Systems-Insurance-DB")
+        public InsuranceDBContext() : base("Systems-Insurance-DB")
         {
             this.Configuration.ProxyCreationEnabled = false;
         }

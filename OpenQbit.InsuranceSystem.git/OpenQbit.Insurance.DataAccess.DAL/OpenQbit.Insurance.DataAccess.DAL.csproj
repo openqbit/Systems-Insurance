@@ -55,7 +55,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceDBContext.cs" />
+    <Compile Include="InsuranceDBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
