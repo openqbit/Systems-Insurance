@@ -11,7 +11,7 @@ namespace OpenQbit.Insurance.DataAccess.DAL
 {
     class Repository : IRepository
     {
-        ServiceDBContext _db = new ServiceDBContext();
+        InsuranceDBContext _db = new InsuranceDBContext();
         public bool Create<T>(T obj) where T : class
         {
             try
