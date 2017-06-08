@@ -40,11 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAccidentValueEstimationManager.cs" />
     <Compile Include="IAgentManager.cs" />
+    <Compile Include="IClaimManager.cs" />
     <Compile Include="IClientManager.cs" />
     <Compile Include="ICommonServiceManager.cs" />
+    <Compile Include="ICoverageManager.cs" />
     <Compile Include="IDocumentManager.cs" />
+    <Compile Include="IEndorsementManager.cs" />
     <Compile Include="IInsuranceManager.cs" />
+    <Compile Include="IItemManager.cs" />
+    <Compile Include="IPaymentManager.cs" />
+    <Compile Include="IPolicyCoverageDetailManager.cs" />
+    <Compile Include="IPolicyTypeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
