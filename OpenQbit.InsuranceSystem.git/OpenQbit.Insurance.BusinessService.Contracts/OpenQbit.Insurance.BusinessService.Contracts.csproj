@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAgentManager.cs" />
     <Compile Include="IClientManager.cs" />
     <Compile Include="ICommonServiceManager.cs" />
+    <Compile Include="IDocumentManager.cs" />
+    <Compile Include="IInsuranceManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
