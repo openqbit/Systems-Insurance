@@ -3,7 +3,7 @@ namespace OpenQbit.Insurance.DataAccess.DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InsuranceMigration1 : DbMigration
+    public partial class DBTest2 : DbMigration
     {
         public override void Up()
         {

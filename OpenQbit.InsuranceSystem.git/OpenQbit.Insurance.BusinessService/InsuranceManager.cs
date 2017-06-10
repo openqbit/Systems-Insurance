@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
-
+using Microsoft.Practices.Unity;
 
 namespace OpenQbit.Insurance.BusinessService
 {

@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="AgentManager.cs" />
     <Compile Include="ClientManager.cs" />
-    <Compile Include="InjectionConstructorAttribute.cs" />
     <Compile Include="InsuranceManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

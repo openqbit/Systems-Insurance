@@ -7,13 +7,13 @@ namespace OpenQbit.Insurance.DataAccess.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InsuranceMigration1 : IMigrationMetadata
+    public sealed partial class DBTest2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InsuranceMigration1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(DBTest2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705291704583_Insurance-Migration-1"; }
+            get { return "201706081759579_DBTest-2"; }
         }
         
         string IMigrationMetadata.Source
