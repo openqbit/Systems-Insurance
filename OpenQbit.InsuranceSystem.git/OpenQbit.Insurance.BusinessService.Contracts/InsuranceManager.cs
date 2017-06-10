@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.BusinessService.Contracts
 {
-    public interface IAgentManager : ICommonServiceManager
+    class InsuranceManager : 
     {
-        
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="ICommonServiceManager.cs" />
     <Compile Include="IDocumentManager.cs" />
     <Compile Include="IInsuranceManager.cs" />
+    <Compile Include="InsuranceManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
