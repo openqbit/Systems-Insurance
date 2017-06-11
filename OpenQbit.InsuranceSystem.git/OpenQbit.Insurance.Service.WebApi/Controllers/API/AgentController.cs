@@ -17,7 +17,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers
         [InjectionConstructor]
         public AgentController(IAgentManager agentManager)
         {
-            _agentManager = agentManager;
+           this._agentManager = agentManager;
         }
 
         public HttpResponseMessage Post(ApiAgentModel agent)

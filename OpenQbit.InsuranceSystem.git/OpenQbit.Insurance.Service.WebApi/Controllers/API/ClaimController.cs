@@ -17,7 +17,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         [InjectionConstructor]
         public ClaimController(IClaimManager claimManager)
         {
-            _claimManager = claimManager;
+            this._claimManager = claimManager;
         }
 
         public HttpResponseMessage Post(ApiClaimModel claim)

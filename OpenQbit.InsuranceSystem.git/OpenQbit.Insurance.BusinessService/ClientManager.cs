@@ -16,7 +16,7 @@ namespace OpenQbit.Insurance.BusinessService
 
         [InjectionConstructor]
         public ClientManager(IRepository repository) {
-            _repository = repository;
+            this._repository = repository;
         }
 
         public bool Recored<T>(T obj) where T : class
