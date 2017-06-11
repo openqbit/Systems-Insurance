@@ -58,7 +58,9 @@
   <ItemGroup>
     <Compile Include="AgentManager.cs" />
     <Compile Include="ClientManager.cs" />
+    <Compile Include="DocumentManager.cs" />
     <Compile Include="InsuranceManager.cs" />
+    <Compile Include="PolicyCoverageDetailManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
