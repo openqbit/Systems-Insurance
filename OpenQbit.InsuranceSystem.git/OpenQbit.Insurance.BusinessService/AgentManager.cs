@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
-
+using Microsoft.Practices.Unity;
 
 namespace OpenQbit.Insurance.BusinessService
 {
@@ -55,6 +55,11 @@ namespace OpenQbit.Insurance.BusinessService
         {
             //Some Logics If Applicable
             return _repository.Update(obj);
+        }
+
+        public bool Save()
+        {
+           return _repository.Save();
         }
     }
 }

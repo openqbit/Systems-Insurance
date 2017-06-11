@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.BusinessService.Contracts
 {
-    interface IAccidentValueEstimationManager : ICommonServiceManager
+    public interface IAccidentValueEstimationManager : ICommonServiceManager
     {
     }
 }

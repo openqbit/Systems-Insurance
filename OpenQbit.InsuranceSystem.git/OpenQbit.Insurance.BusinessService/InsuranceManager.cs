@@ -56,5 +56,10 @@ namespace OpenQbit.Insurance.BusinessService
             //Some Logics If Applicable
             return _repository.Update(obj);
         }
+
+        public bool Save()
+        {
+            return _repository.Save();
+        }
     }
 }

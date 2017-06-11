@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class DocumentManager
+    class DocumentManager : IDocumentManager
     {
         IRepository _repository;
         [InjectionConstructor]
@@ -54,6 +54,11 @@ namespace OpenQbit.Insurance.BusinessService
         {
             //Some Logics If Applicable
             return _repository.Update(obj);
+        }
+
+        public bool Save()
+        {
+            return _repository.Save();
         }
 
     }

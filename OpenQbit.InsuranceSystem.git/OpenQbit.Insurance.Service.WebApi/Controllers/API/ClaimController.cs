@@ -5,30 +5,42 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using OpenQbit.Insurance.Service.WebApi.Models.API;
-
+using OpenQbit.Insurance.BusinessService.Contracts;
+using Microsoft.Practices.Unity;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class ClaimController : ApiController
     {
-        public HttpResponseMessage Post(ApiClaimModel accident)
+        private IClaimManager _claimManager;
+
+        [InjectionConstructor]
+        public ClaimController(IClaimManager claimManager)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            _claimManager = claimManager;
         }
 
-        public HttpResponseMessage Put(ApiClaimModel accident)
+        public HttpResponseMessage Post(ApiClaimModel claim)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if(_claimManager.Recored(claim))return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public HttpResponseMessage Delete(int? ID)
+        public HttpResponseMessage Put(ApiClaimModel claim)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if(_claimManager.Update(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public ApiClaimModel Get(int? ID)
+        public HttpResponseMessage Delete(ApiClaimModel claim)
         {
-            ApiClaimModel claim = new ApiClaimModel
+            if(_claimManager.Delete(claim))return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+        }
+
+        public ApiClaimModel Get(ApiClaimModel claim)
+        {
+            /*ApiClaimModel claim = new ApiClaimModel
             {
                 ID = (int)ID,
                 ClaimValue=25000,
@@ -36,12 +48,14 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
                 Note="Damage Covered"
             };
 
-            return claim;
+            return claim;*/
+
+            return _claimManager.Find<ApiClaimModel>(e => e.ID == claim.ID);
         }
 
         public List<ApiClaimModel> GetList()
         {
-            List<ApiClaimModel> claimList = new List<ApiClaimModel>();
+            /*List<ApiClaimModel> claimList = new List<ApiClaimModel>();
 
             ApiClaimModel claim1 = new ApiClaimModel
             {
@@ -60,7 +74,9 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
                 Note="Pending"
             };
             claimList.Add(claim2);
-            return claimList;
+            return claimList;*/
+
+            return _claimManager.GetAll<ApiClaimModel>();
         }
     }
 }

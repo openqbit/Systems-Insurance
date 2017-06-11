@@ -5,30 +5,43 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using OpenQbit.Insurance.BusinessService.Contracts;
+using Microsoft.Practices.Unity; // InjectionConstructor
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers
 {
     public class AgentController : ApiController
     {
-        //POST
-        public HttpResponseMessage Post(ApiAgentModel accident)
+        IAgentManager _agentManager;
+
+        [InjectionConstructor]
+        public AgentController(IAgentManager agentManager)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            _agentManager = agentManager;
         }
 
-        public HttpResponseMessage Put(ApiAgentModel accident)
+        public HttpResponseMessage Post(ApiAgentModel agent)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if (_agentManager.Recored(agent)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);  
         }
 
-        public HttpResponseMessage Delete(int? ID)
+        public HttpResponseMessage Put(ApiAgentModel agent)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if (_agentManager.Update(agent)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+
         }
 
-        public ApiAgentModel Get(int? ID)
+        public HttpResponseMessage Delete(ApiAgentModel agent)
         {
-            ApiAgentModel agent = new ApiAgentModel
+            if (_agentManager.Delete(agent)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+        }
+
+        public ApiAgentModel Get(ApiAgentModel agent)
+        {
+            /*ApiAgentModel agent = new ApiAgentModel
             {
                 ID = (int)ID,
                 First_Name = "Pahansith",
@@ -41,12 +54,13 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers
                 Telephone = 0415689512
             };
 
-            return agent;
+            return agent;*/
+           return _agentManager.Find<ApiAgentModel>(e => e.ID == agent.ID);
         }
 
         public List<ApiAgentModel> GetList()
         {
-            List<ApiAgentModel> agentList = new List<ApiAgentModel>();
+            /*List<ApiAgentModel> agentList = new List<ApiAgentModel>();
             ApiAgentModel agent1 = new ApiAgentModel
             {
                 ID = 1,
@@ -73,7 +87,8 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers
                 Telephone = 0415689512
             };
             agentList.Add(agent2);
-            return agentList;
+            return agentList;*/
+            return _agentManager.GetAll<ApiAgentModel>();
         }
 
     }

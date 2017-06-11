@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.BusinessService.Contracts
 {
-    interface IDocumentManager : ICommonServiceManager
+    public interface IDocumentManager : ICommonServiceManager
     {
     }
 }
