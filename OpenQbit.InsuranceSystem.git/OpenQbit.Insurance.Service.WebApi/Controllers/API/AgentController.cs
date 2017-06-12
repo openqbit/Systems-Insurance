@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using OpenQbit.Insurance.Common.Ioc;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using Microsoft.Practices.Unity; // InjectionConstructor
 
@@ -12,13 +13,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers
 {
     public class AgentController : ApiController
     {
-        IAgentManager _agentManager;
-
-        [InjectionConstructor]
-        public AgentController(IAgentManager agentManager)
-        {
-           this._agentManager = agentManager;
-        }
+        IAgentManager _agentManager = UnityResolver.Resolve<IAgentManager>();
 
         public HttpResponseMessage Post(ApiAgentModel agent)
         {

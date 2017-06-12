@@ -331,6 +331,10 @@
       <Project>{27d7af17-1b0b-4ed7-8618-571baba9c67c}</Project>
       <Name>OpenQbit.Insurance.BusinessService.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Insurance.Common.Ioc\OpenQbit.Insurance.Common.Ioc.csproj">
+      <Project>{0c353b2e-b679-463e-9c1f-010b20d2405c}</Project>
+      <Name>OpenQbit.Insurance.Common.Ioc</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

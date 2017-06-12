@@ -11,7 +11,7 @@ using OpenQbit.Insurance.BusinessService;
 
 namespace OpenQbit.Insurance.Common.Ioc
 {
-    class UnityResolver
+    public class UnityResolver
     {
         private static readonly IUnityContainer Container = new UnityContainer();
 

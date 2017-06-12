@@ -7,19 +7,14 @@ using System.Web.Http;
 using OpenQbit.Insurance.Service.WebApi.Models.API;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using Microsoft.Practices.Unity;
+using OpenQbit.Insurance.Common.Ioc;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class ClaimController : ApiController
     {
-        private IClaimManager _claimManager;
-
-        [InjectionConstructor]
-        public ClaimController(IClaimManager claimManager)
-        {
-            this._claimManager = claimManager;
-        }
-
+        private IClaimManager _claimManager = UnityResolver.Resolve<IClaimManager>();
+        
         public HttpResponseMessage Post(ApiClaimModel claim)
         {
             if(_claimManager.Recored(claim))return new HttpResponseMessage(HttpStatusCode.OK);
