@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.DataAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Test2", "OpenQbit.Insurance.Test2\OpenQbit.Insurance.Test2.csproj", "{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.Ioc", "OpenQbit.Insurance.Common.Ioc\OpenQbit.Insurance.Common.Ioc.csproj", "{0C353B2E-B679-463E-9C1F-010B20D2405C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,5 +102,6 @@ Global
 		{623CED5B-6B56-4236-BA44-B7E05EEA0029} = {C335055B-B610-4FAE-BFE9-24A35330D5C5}
 		{D569862A-2236-464D-8516-E772D339D52D} = {C335055B-B610-4FAE-BFE9-24A35330D5C5}
 		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D} = {5F2A6742-AEA0-4010-B2E3-3E0AA3F29343}
+		{0C353B2E-B679-463E-9C1F-010B20D2405C} = {E19D6B8E-CB0B-4F41-9529-2A42F78A55BD}
 	EndGlobalSection
 EndGlobal

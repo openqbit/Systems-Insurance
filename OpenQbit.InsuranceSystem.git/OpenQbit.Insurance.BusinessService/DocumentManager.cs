@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class DocumentManager : IDocumentManager
+    public class DocumentManager : IDocumentManager
     {
         IRepository _repository;
         [InjectionConstructor]

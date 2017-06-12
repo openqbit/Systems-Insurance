@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace OpenQbit.Insurance.DataAccess.DAL
 {
-    class Repository : IRepository
+    public class Repository : IRepository
     {
         InsuranceDBContext _db = new InsuranceDBContext();
         public bool Create<T>(T obj) where T : class

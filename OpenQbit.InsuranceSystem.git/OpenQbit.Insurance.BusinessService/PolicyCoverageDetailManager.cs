@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 namespace OpenQbit.Insurance.BusinessService
 {
 
-    class PolicyCoverageDetailManager : IPolicyCoverageDetailManager
+    public class PolicyCoverageDetailManager : IPolicyCoverageDetailManager
     {
         IRepository _repository;
         [InjectionConstructor]

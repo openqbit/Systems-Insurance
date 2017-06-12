@@ -10,7 +10,7 @@ using Microsoft.Practices.Unity;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class InsuranceManager : IInsuranceManager
+    public class InsuranceManager : IInsuranceManager
     {
         IRepository _repository;
 
