@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Web.Http;
 using OpenQbit.Insurance.Common.Ioc;
 using OpenQbit.Insurance.BusinessService.Contracts;
-
+using Microsoft.Practices.Unity; // InjectionConstructor
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers
 {

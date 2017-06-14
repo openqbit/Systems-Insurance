@@ -5,49 +5,40 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using OpenQbit.Insurance.Common.Ioc;
-using OpenQbit.Insurance.BusinessService.Contracts;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class PolicyTypeController : ApiController
     {
-        IPolicyTypeManager _policyTypeManager = UnityResolver.Resolve<IPolicyTypeManager>();
-
         public HttpResponseMessage Post(ApiPolicyTypeModel accident)
         {
-            if (_policyTypeManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         public HttpResponseMessage Put(ApiPolicyTypeModel accident)
         {
-
-            if (_policyTypeManager.Update(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
-        public HttpResponseMessage Delete(ApiPolicyTypeModel accident)
+        public HttpResponseMessage Delete(int? ID)
         {
-            if (_policyTypeManager.Delete(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
-        public ApiPolicyTypeModel Get(ApiPolicyTypeModel accident)
+        public ApiPolicyTypeModel Get(int? ID)
         {
             List<String> eligibilities = new List<string>();
             eligibilities.Add("18+");
             eligibilities.Add("Nationality - SriLankan");
 
-            /*ApiPolicyTypeModel policyType = new ApiPolicyTypeModel
+            ApiPolicyTypeModel policyType = new ApiPolicyTypeModel
             {
                 ID = (int)ID,
                 Type = PolicyTypes.Life,
                 Eligibilities = eligibilities
             };
 
-            return policyType;*/
-            return _policyTypeManager.Find<ApiPolicyTypeModel>(e => e.ID == accident.ID);
+            return policyType;
         }
 
         public List<ApiPolicyTypeModel> GetList()
@@ -57,7 +48,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             eligibilities1.Add("18+");
             eligibilities1.Add("Nationality - SriLankan");
 
-            /*ApiPolicyTypeModel policyType1 = new ApiPolicyTypeModel
+            ApiPolicyTypeModel policyType1 = new ApiPolicyTypeModel
             {
                 ID = 1,
                 Type = PolicyTypes.Life,
@@ -72,8 +63,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             policyTypeList.Add(policyType1);
             policyTypeList.Add(policyType2);
 
-            return policyTypeList;*/
-            return _policyTypeManager.GetAll<ApiPolicyTypeModel>();
+            return policyTypeList;
         }
     }
         
