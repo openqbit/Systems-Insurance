@@ -10,12 +10,11 @@ using System.Linq.Expressions;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class ClaimManager : IClaimManager
+    class CoverageManager:ICoverageManager
     {
         IRepository _repository;
-
         [InjectionConstructor]
-        public ClaimManager(IRepository repository)
+        public CoverageManager(IRepository repository)
         {
             _repository = repository;
         }

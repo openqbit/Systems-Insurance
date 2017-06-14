@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using Microsoft.Practices.Unity;
-using System.Linq.Expressions;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class ClaimManager : IClaimManager
+    class ItemManager  : IItemManager
     {
         IRepository _repository;
 
         [InjectionConstructor]
-        public ClaimManager(IRepository repository)
+        public ItemManager(IRepository repository)
         {
-            _repository = repository;
+            this._repository = repository;
         }
 
         public bool Recored<T>(T obj) where T : class
@@ -62,4 +62,6 @@ namespace OpenQbit.Insurance.BusinessService
             return _repository.Save();
         }
     }
+
+
 }
