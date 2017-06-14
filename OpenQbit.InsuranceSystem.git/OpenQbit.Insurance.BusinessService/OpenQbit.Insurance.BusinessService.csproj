@@ -60,6 +60,7 @@
     <Compile Include="AgentManager.cs" />
     <Compile Include="ClaimManager.cs" />
     <Compile Include="ClientManager.cs" />
+    <Compile Include="CoverageManager.cs" />
     <Compile Include="DocumentManager.cs" />
     <Compile Include="EndorsementManager.cs" />
     <Compile Include="InsuranceManager.cs" />
