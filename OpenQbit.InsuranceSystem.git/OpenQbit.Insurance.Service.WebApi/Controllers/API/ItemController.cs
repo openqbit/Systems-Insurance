@@ -14,22 +14,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
     public class ItemController : ApiController
     {
         IItemManager _itemManager = UnityResolver.Resolve<IItemManager>();
-        public HttpResponseMessage Post(ApiItemModel item)
+        public HttpResponseMessage Post(ApiItemModel accident)
         {
-            if (_itemManager.Recored(item)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        public HttpResponseMessage Put(ApiItemModel item)
+        public HttpResponseMessage Put(ApiItemModel accident)
         {
-            if (_itemManager.Update(item)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
-        public HttpResponseMessage Delete(ApiItemModel item)
+        public HttpResponseMessage Delete(int? ID)
         {
-            if (_itemManager.Delete(item)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
         public ApiItemModel Get(ApiItemModel item)
