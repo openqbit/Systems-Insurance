@@ -14,19 +14,22 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
     public class PaymentController : ApiController
     {
         IPaymentManager _paymentManager = UnityResolver.Resolve<IPaymentManager>();
-        public HttpResponseMessage Post(ApiPaymentModel accident)
+        public HttpResponseMessage Post(ApiPaymentModel payment)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_paymentManager.Recored(payment)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public HttpResponseMessage Put(ApiPaymentModel accident)
+        public HttpResponseMessage Put(ApiPaymentModel payment)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if (_agentManager.Update(payment)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public HttpResponseMessage Delete(int? ID)
+        public HttpResponseMessage Delete(ApiPaymentModel payment)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if (_agentManager.Delete(payment)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
         public ApiPaymentModel Get(ApiPaymentModel payment)
