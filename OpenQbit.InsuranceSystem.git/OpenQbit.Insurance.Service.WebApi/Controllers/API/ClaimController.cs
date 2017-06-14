@@ -17,19 +17,19 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         
         public HttpResponseMessage Post(ApiClaimModel claim)
         {
-            if(_claimManager.Recored(claim))return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_claimManager.Recored(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
         public HttpResponseMessage Put(ApiClaimModel claim)
         {
-            if(_claimManager.Update(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_claimManager.Update(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
         public HttpResponseMessage Delete(ApiClaimModel claim)
         {
-            if(_claimManager.Delete(claim))return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_claimManager.Delete(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
