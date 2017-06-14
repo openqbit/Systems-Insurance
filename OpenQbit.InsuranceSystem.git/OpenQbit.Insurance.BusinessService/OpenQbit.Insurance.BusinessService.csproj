@@ -62,7 +62,9 @@
     <Compile Include="ClientManager.cs" />
     <Compile Include="CoverageManager.cs" />
     <Compile Include="DocumentManager.cs" />
+    <Compile Include="EndorsementManager.cs" />
     <Compile Include="InsuranceManager.cs" />
+    <Compile Include="ItemManager.cs" />
     <Compile Include="PolicyCoverageDetailManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
