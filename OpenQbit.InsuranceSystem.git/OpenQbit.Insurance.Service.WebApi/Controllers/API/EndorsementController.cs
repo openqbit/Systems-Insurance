@@ -1,74 +1,61 @@
-﻿using OpenQbit.Insurance.Service.WebApi.Models.API;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using OpenQbit.Insurance.Common.Ioc;
-using OpenQbit.Insurance.BusinessService.Contracts;
-using Microsoft.Practices.Unity;
+using OpenQbit.Insurance.Service.WebApi.Models;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class EndorsementController : ApiController
     {
-
-         IEndorsementManager _endorsementManager = UnityResolver.Resolve<IEndorsementManager>();
-
         public HttpResponseMessage Post(ApiEndorsementModel accident)
         {
-            if (_endorsementManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         public HttpResponseMessage Put(ApiEndorsementModel accident)
         {
-            if (_endorsementManager.Update(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
-
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
-        public HttpResponseMessage Delete(ApiEndorsementModel accident)
+        public HttpResponseMessage Delete(int? ID)
         {
-            if (_endorsementManager.Delete(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            return new HttpResponseMessage(HttpStatusCode.OK); ;
         }
 
-        public ApiEndorsementModel Get(ApiEndorsementModel accident)
+        public ApiEndorsementModel Get(int? ID)
         {
-            /*ApiEndorsementModel endorsement = new ApiEndorsementModel
+            ApiEndorsementModel endorsement = new ApiEndorsementModel
             {
-                //ID = (int)ID,
-                //Details = "Nothing",
-                //PolicyCoverageDetailID = 1
+                ID = (int)ID,
+                Details = "Nothing",
+                PolicyCoverageDetailID = 1
             };
 
-            return endorsement;*/
-            return _endorsementManager.Find<ApiEndorsementModel>(e => e.ID == accident.ID);
-
+            return endorsement;
         }
 
         public List<ApiEndorsementModel> GetList()
         {
-            /*List<ApiEndorsementModel> endorsementList = new List<ApiEndorsementModel>();
+            List<ApiEndorsementModel> endorsementList = new List<ApiEndorsementModel>();
             ApiEndorsementModel endorsement1 = new ApiEndorsementModel
             {
-                //ID = 1,
-                //Details = "Nothing",
-                //PolicyCoverageDetailID = 1
+                ID = 1,
+                Details = "Nothing",
+                PolicyCoverageDetailID = 1
             };
             endorsementList.Add(endorsement1);
 
             ApiEndorsementModel endorsement2 = new ApiEndorsementModel
             {
-                //ID = 2,
-                //Details = "Nothing",
-                //PolicyCoverageDetailID = 1
+                ID = 2,
+                Details = "Nothing",
+                PolicyCoverageDetailID = 1
             };
             endorsementList.Add(endorsement2);
-            return endorsementList;*/
-            return _endorsementManager.GetAll<ApiEndorsementModel>();
+            return endorsementList;
         }
     }
 }
