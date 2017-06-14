@@ -6,11 +6,15 @@ using System.Net.Http;
 using System.Web.Http;
 using OpenQbit.Insurance.Service.WebApi.Models.API;
 using System.Collections;
-
+using OpenQbit.Insurance.Common.Ioc;
+using OpenQbit.Insurance.BusinessService.Contracts;
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class AccidentValueEstimationController : ApiController
     {
+
+        IAccidentValueEstimationManager _accidentValueEstimationManager = UnityResolver.Resolve<IAccidentValueEstimationManager>();
+
         public HttpResponseMessage Post(ApiAccidentValueEstimationModel accident)
         {
             if (_accidentValueEstimationManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
@@ -29,7 +33,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public ApiAccidentValueEstimationModel Get(int? ID)
+        public ApiAccidentValueEstimationModel Get(ApiAccidentValueEstimationModel accidentValueEstimation)
         {
             //List<String> damagePartsList = new List<string>();
             //damagePartsList.Add("Buffer");
