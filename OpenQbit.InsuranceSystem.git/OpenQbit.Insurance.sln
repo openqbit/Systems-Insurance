@@ -3,105 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Common", "0 Common", "{E19D6B8E-CB0B-4F41-9529-2A42F78A55BD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Common", "0 Common", "{716E425D-04EB-425D-8C57-847E3D378CBE}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Service", "2 Service", "{FEEE388C-7377-416B-9CA7-5D3ECD899B6D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Presentation", "1 Presentation", "{53E3CB7C-8A38-4BFD-8F00-76068DA6BA8E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Presentation", "1 Presentation", "{E4FD3543-51FC-4080-8943-E06185D5B1CD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Service", "2 Service", "{9268BEF3-0320-4BBD-92C7-F75E3A4ABEA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.Models", "OpenQbit.Insurance.Common.Models\OpenQbit.Insurance.Common.Models.csproj", "{DC9F0658-9119-4914-B244-0F4128ACE8EE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 BLL", "3 BLL", "{FCB30D9F-8AEF-431F-9653-7C932A2123DF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 BLL", "3 BLL", "{573A1D25-DA26-43FD-ABF2-7CB3E6E7EA23}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 DataAccess", "4 DataAccess", "{F722F368-FB50-419D-B9C7-9606EA7C5E64}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 DAL", "4 DAL", "{C335055B-B610-4FAE-BFE9-24A35330D5C5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Service.WebApi", "OpenQbit.Insurance.Service.WebApi\OpenQbit.Insurance.Service.WebApi.csproj", "{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.BusinessService", "OpenQbit.Insurance.BusinessService\OpenQbit.Insurance.BusinessService.csproj", "{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.BusinessService.Contracts", "OpenQbit.Insurance.BusinessService.Contracts\OpenQbit.Insurance.BusinessService.Contracts.csproj", "{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Test", "5 Test", "{5F2A6742-AEA0-4010-B2E3-3E0AA3F29343}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Test1", "OpenQbit.Insurance.Test1\OpenQbit.Insurance.Test1.csproj", "{56762376-4DF7-48A4-9408-C2B9C341F29E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Presentation.Web", "OpenQbit.Insurance.Presentation.Web\OpenQbit.Insurance.Presentation.Web.csproj", "{1408BBA6-8EDC-49EF-8143-60021F34A05A}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OpenQbit.Insurance.Presentation.Test", "OpenQbit.Insurance.Presentation.Test\OpenQbit.Insurance.Presentation.Test.xproj", "{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.DataAccess.DAL", "OpenQbit.Insurance.DataAccess.DAL\OpenQbit.Insurance.DataAccess.DAL.csproj", "{623CED5B-6B56-4236-BA44-B7E05EEA0029}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.DataAccess.DAL.Contracts", "OpenQbit.Insurance.DataAccess.DAL.Contracts\OpenQbit.Insurance.DataAccess.DAL.Contracts.csproj", "{D569862A-2236-464D-8516-E772D339D52D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Test2", "OpenQbit.Insurance.Test2\OpenQbit.Insurance.Test2.csproj", "{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.Ioc", "OpenQbit.Insurance.Common.Ioc\OpenQbit.Insurance.Common.Ioc.csproj", "{0C353B2E-B679-463E-9C1F-010B20D2405C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Test", "5 Test", "{C132AB59-8964-4356-850C-63FA31EE4896}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC9F0658-9119-4914-B244-0F4128ACE8EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56762376-4DF7-48A4-9408-C2B9C341F29E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56762376-4DF7-48A4-9408-C2B9C341F29E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56762376-4DF7-48A4-9408-C2B9C341F29E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56762376-4DF7-48A4-9408-C2B9C341F29E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D569862A-2236-464D-8516-E772D339D52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D569862A-2236-464D-8516-E772D339D52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D569862A-2236-464D-8516-E772D339D52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D569862A-2236-464D-8516-E772D339D52D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{DC9F0658-9119-4914-B244-0F4128ACE8EE} = {E19D6B8E-CB0B-4F41-9529-2A42F78A55BD}
-		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765} = {FEEE388C-7377-416B-9CA7-5D3ECD899B6D}
-		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F} = {573A1D25-DA26-43FD-ABF2-7CB3E6E7EA23}
-		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C} = {573A1D25-DA26-43FD-ABF2-7CB3E6E7EA23}
-		{56762376-4DF7-48A4-9408-C2B9C341F29E} = {5F2A6742-AEA0-4010-B2E3-3E0AA3F29343}
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A} = {E4FD3543-51FC-4080-8943-E06185D5B1CD}
-		{1566F7A7-5D54-42EC-8AA1-4F8C30381F50} = {E4FD3543-51FC-4080-8943-E06185D5B1CD}
-		{623CED5B-6B56-4236-BA44-B7E05EEA0029} = {C335055B-B610-4FAE-BFE9-24A35330D5C5}
-		{D569862A-2236-464D-8516-E772D339D52D} = {C335055B-B610-4FAE-BFE9-24A35330D5C5}
-		{00D9895E-23EF-48AF-A49B-0FE6F5776E5D} = {5F2A6742-AEA0-4010-B2E3-3E0AA3F29343}
-		{0C353B2E-B679-463E-9C1F-010B20D2405C} = {E19D6B8E-CB0B-4F41-9529-2A42F78A55BD}
 	EndGlobalSection
 EndGlobal
