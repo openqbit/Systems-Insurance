@@ -56,7 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccidentValueEstimationManager.cs" />
     <Compile Include="AgentManager.cs" />
+    <Compile Include="ClaimManager.cs" />
     <Compile Include="ClientManager.cs" />
     <Compile Include="DocumentManager.cs" />
     <Compile Include="InsuranceManager.cs" />
