@@ -13,17 +13,20 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
     {
         public HttpResponseMessage Post(ApiAccidentValueEstimationModel accident)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_accidentValueEstimationManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
         public HttpResponseMessage Put(ApiAccidentValueEstimationModel accident)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if (_accidentValueEstimationManager.Update(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public HttpResponseMessage Delete(int? ID)
+        public HttpResponseMessage Delete(ApiAccidentValueEstimationModel accident)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if (_accidentValueEstimationManager.Delete(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
         public ApiAccidentValueEstimationModel Get(int? ID)
