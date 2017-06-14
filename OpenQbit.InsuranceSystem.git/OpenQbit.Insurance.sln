@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Common", "0 Common", "{716E425D-04EB-425D-8C57-847E3D378CBE}"
-	ProjectSection(SolutionItems) = preProject
-		TextFile1.txt = TextFile1.txt
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Presentation", "1 Presentation", "{53E3CB7C-8A38-4BFD-8F00-76068DA6BA8E}"
 EndProject
@@ -18,8 +15,72 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 DataAccess", "4 DataAcces
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Test", "5 Test", "{C132AB59-8964-4356-850C-63FA31EE4896}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.Models", "OpenQbit.Insurance.Common.Models\OpenQbit.Insurance.Common.Models.csproj", "{38EC820B-2D06-4ADE-A820-E9ACA2507E66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.DataAccess.DAL", "OpenQbit.Insurance.DataAccess.DAL\OpenQbit.Insurance.DataAccess.DAL.csproj", "{623CED5B-6B56-4236-BA44-B7E05EEA0029}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.DataAccess.DAL.Contracts", "OpenQbit.Insurance.DataAccess.DAL.Contracts\OpenQbit.Insurance.DataAccess.DAL.Contracts.csproj", "{D569862A-2236-464D-8516-E772D339D52D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.BusinessService", "OpenQbit.Insurance.BusinessService\OpenQbit.Insurance.BusinessService.csproj", "{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.BusinessService.Contracts", "OpenQbit.Insurance.BusinessService.Contracts\OpenQbit.Insurance.BusinessService.Contracts.csproj", "{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.Ioc", "OpenQbit.Insurance.Common.Ioc\OpenQbit.Insurance.Common.Ioc.csproj", "{0C353B2E-B679-463E-9C1F-010B20D2405C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Service.WebApi", "OpenQbit.Insurance.Service.WebApi\OpenQbit.Insurance.Service.WebApi.csproj", "{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Presentation.Web", "OpenQbit.Insurance.Presentation.Web\OpenQbit.Insurance.Presentation.Web.csproj", "{1408BBA6-8EDC-49EF-8143-60021F34A05A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38EC820B-2D06-4ADE-A820-E9ACA2507E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38EC820B-2D06-4ADE-A820-E9ACA2507E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38EC820B-2D06-4ADE-A820-E9ACA2507E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38EC820B-2D06-4ADE-A820-E9ACA2507E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{623CED5B-6B56-4236-BA44-B7E05EEA0029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D569862A-2236-464D-8516-E772D339D52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D569862A-2236-464D-8516-E772D339D52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D569862A-2236-464D-8516-E772D339D52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D569862A-2236-464D-8516-E772D339D52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C353B2E-B679-463E-9C1F-010B20D2405C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38EC820B-2D06-4ADE-A820-E9ACA2507E66} = {716E425D-04EB-425D-8C57-847E3D378CBE}
+		{623CED5B-6B56-4236-BA44-B7E05EEA0029} = {F722F368-FB50-419D-B9C7-9606EA7C5E64}
+		{D569862A-2236-464D-8516-E772D339D52D} = {F722F368-FB50-419D-B9C7-9606EA7C5E64}
+		{3A1FD650-7346-4891-9F86-AA2A1B5A4B1F} = {FCB30D9F-8AEF-431F-9653-7C932A2123DF}
+		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C} = {FCB30D9F-8AEF-431F-9653-7C932A2123DF}
+		{0C353B2E-B679-463E-9C1F-010B20D2405C} = {716E425D-04EB-425D-8C57-847E3D378CBE}
+		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765} = {9268BEF3-0320-4BBD-92C7-F75E3A4ABEA4}
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A} = {53E3CB7C-8A38-4BFD-8F00-76068DA6BA8E}
 	EndGlobalSection
 EndGlobal
