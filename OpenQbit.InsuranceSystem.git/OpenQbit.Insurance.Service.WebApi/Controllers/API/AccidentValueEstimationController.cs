@@ -11,6 +11,9 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
     public class AccidentValueEstimationController : ApiController
     {
+
+
+
         public HttpResponseMessage Post(ApiAccidentValueEstimationModel accident)
         {
             if (_accidentValueEstimationManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
