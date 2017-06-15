@@ -24,14 +24,14 @@ namespace OpenQbit.Insurance.Common.Ioc
             Container.RegisterType<IDocumentManager, DocumentManager>();
             Container.RegisterType<IInsuranceManager, InsuranceManager>();
             Container.RegisterType<IPolicyCoverageDetailManager, PolicyCoverageDetailManager>();
-            //Container.RegisterType<IAccidentValueEstimationManager, AccidentValueEstimationManager>();
-            //Container.RegisterType<IClaimManager, ClaimManager>();
-            //Container.RegisterType<ICoverageManager, CoverageManager>();
-            //Container.RegisterType<ICoverageManager, CoverageManager>();
-            //Container.RegisterType<IEndorsementManager, EndorsementManager>();
-            //Container.RegisterType<IItemManager, ItemManager>();
-            //Container.RegisterType<IPaymentManager, PaymentManager>();
-            //Container.RegisterType<IPolicyTypeManager, PolicyTypeManager>();
+            Container.RegisterType<IAccidentValueEstimationManager, AccidentValueEstimationManager>();
+            Container.RegisterType<IClaimManager, ClaimManager>();
+            Container.RegisterType<ICoverageManager, CoverageManager>();
+            Container.RegisterType<ICoverageManager, CoverageManager>();
+            Container.RegisterType<IEndorsementManager, EndorsementManager>();
+            Container.RegisterType<IItemManager, ItemManager>();
+            Container.RegisterType<IPaymentManager, PaymentManager>();
+            Container.RegisterType<IPolicyTypeManager, PolicyTypeManager>();
 
         }
 

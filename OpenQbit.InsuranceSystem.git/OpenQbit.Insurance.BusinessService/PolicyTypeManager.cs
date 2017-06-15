@@ -10,7 +10,7 @@ using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class PolicyTypeManager : IPolicyTypeManager
+    public class PolicyTypeManager : IPolicyTypeManager
     {
 
         IRepository _repository;

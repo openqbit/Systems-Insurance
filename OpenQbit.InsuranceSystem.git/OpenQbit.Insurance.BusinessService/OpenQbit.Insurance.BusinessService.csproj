@@ -64,6 +64,7 @@
     <Compile Include="DocumentManager.cs" />
     <Compile Include="EndorsementManager.cs" />
     <Compile Include="InsuranceManager.cs" />
+    <Compile Include="ItemManager.cs" />
     <Compile Include="PaymentManager.cs" />
     <Compile Include="PolicyCoverageDetailManager.cs" />
     <Compile Include="PolicyTypeManager.cs" />

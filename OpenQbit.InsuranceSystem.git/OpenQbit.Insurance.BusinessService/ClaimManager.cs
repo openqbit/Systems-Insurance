@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class ClaimManager : IClaimManager
+    public class ClaimManager : IClaimManager
     {
         IRepository _repository;
 

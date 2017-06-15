@@ -9,7 +9,7 @@ using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 
 namespace OpenQbit.Insurance.BusinessService
 {
-    class PaymentManager : IPaymentManager
+    public class PaymentManager : IPaymentManager
     {
         IRepository _repository;
 
