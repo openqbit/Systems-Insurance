@@ -6,11 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using System.Data.Entity;
+using OpenQbit.Insurance.Common.Utils.Logs;
+using Microsoft.Practices.Unity;
 
 namespace OpenQbit.Insurance.DataAccess.DAL
 {
     public class Repository : IRepository
     {
+
+        private ILogger _logger;
+
+        [InjectionConstructor]
+        public Repository(ILogger _logger) {
+            this._logger = _logger;
+        }
         InsuranceDBContext _db = new InsuranceDBContext();
         public bool Create<T>(T obj) where T : class
         {
