@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using Microsoft.Practices.Unity;
+using OpenQbit.Insurance.Common.Models;
+using OpenQbit.Insurance.Common.Utils.Logs;
 
 namespace OpenQbit.Insurance.BusinessService
 {
@@ -19,6 +21,12 @@ namespace OpenQbit.Insurance.BusinessService
         {
             this._repository = repository;
         }
+        public bool RecoredMortorInsurance(InsuranceModel obj)
+        {
+            //Some Logics If Applicable
+            return Recored<InsuranceModel>(obj);
+        }
+
 
         public bool Recored<T>(T obj) where T : class
         {
