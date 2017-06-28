@@ -7,21 +7,33 @@ using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using Microsoft.Practices.Unity;
+using OpenQbit.Insurance.Common.Models;
+using OpenQbit.Insurance.Common.Utils.Logs;
 
 namespace OpenQbit.Insurance.BusinessService
 {
     public class InsuranceManager : IInsuranceManager
     {
         IRepository _repository;
+        ILogger _logger;
 
         [InjectionConstructor]
-        public InsuranceManager(IRepository repository)
+        public InsuranceManager(IRepository repository, ILogger logger)
         {
             this._repository = repository;
         }
+        
+        public bool RecoredFireInsurance(InsuranceModel newInsurance)
+        {
+          // return _repository.Create<InsuranceModel>(newInsurance);
+           
+            return Recored<InsuranceModel>(newInsurance);
+
+        }
+
 
         public bool Recored<T>(T obj) where T : class
-        {
+        {           
             //Some Logics If Applicable
             return _repository.Create(obj);
         }
