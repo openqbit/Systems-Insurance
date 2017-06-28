@@ -6,16 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
+using OpenQbit.Insurance.Common.Utils.Logs;
 
 namespace OpenQbit.Insurance.BusinessService
 {
     public class PaymentManager : IPaymentManager
     {
         IRepository _repository;
+        ILogger _logger;
 
-        public PaymentManager(IRepository repository)
+        public PaymentManager(IRepository repository, ILogger logger)
         {
             _repository = repository;
+            this._logger = logger;
         }
 
         public bool Recored<T>(T obj) where T : class

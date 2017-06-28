@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using Microsoft.Practices.Unity;
+using OpenQbit.Insurance.Common.Utils.Logs;
 
 namespace OpenQbit.Insurance.BusinessService
 {
     public class EndorsementManager : IEndorsementManager
     {
         IRepository _repository;
+        ILogger _logger;
 
         [InjectionConstructor]
-        public EndorsementManager(IRepository repository)
+        public EndorsementManager(IRepository repository, ILogger logger)
         {
             this._repository = repository;
+            this._logger = logger;
         }
 
         public bool Recored<T>(T obj) where T : class

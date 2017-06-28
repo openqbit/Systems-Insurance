@@ -7,17 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Practices.Unity;
 using System.Linq.Expressions;
+using OpenQbit.Insurance.Common.Utils.Logs;
 
 namespace OpenQbit.Insurance.BusinessService
 {
     public class AccidentValueEstimationManager : IAccidentValueEstimationManager
     {
         IRepository _repository;
+        ILogger _logger;
 
         [InjectionConstructor]
-        public AccidentValueEstimationManager(IRepository repository)
+        public AccidentValueEstimationManager(IRepository repository, ILogger logger)
         {
             _repository = repository;
+            this._logger = logger;
         }
 
         public bool Recored<T>(T obj) where T : class

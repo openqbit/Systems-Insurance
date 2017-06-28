@@ -78,6 +78,14 @@
       <Project>{27d7af17-1b0b-4ed7-8618-571baba9c67c}</Project>
       <Name>OpenQbit.Insurance.BusinessService.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Insurance.Common.Models\OpenQbit.Insurance.Common.Models.csproj">
+      <Project>{38ec820b-2d06-4ade-a820-e9aca2507e66}</Project>
+      <Name>OpenQbit.Insurance.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Insurance.Common.Utils.Logs\OpenQbit.Insurance.Common.Utils.Logs.csproj">
+      <Project>{e4f9f4b3-b414-4317-bf82-e6290e71016a}</Project>
+      <Name>OpenQbit.Insurance.Common.Utils.Logs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Insurance.DataAccess.DAL.Contracts\OpenQbit.Insurance.DataAccess.DAL.Contracts.csproj">
       <Project>{d569862a-2236-464d-8516-e772d339d52d}</Project>
       <Name>OpenQbit.Insurance.DataAccess.DAL.Contracts</Name>

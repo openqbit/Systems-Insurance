@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
+using OpenQbit.Insurance.Common.Utils.Logs;
 
 
 namespace OpenQbit.Insurance.BusinessService
@@ -14,10 +15,11 @@ namespace OpenQbit.Insurance.BusinessService
     {
 
         IRepository _repository;
-        
-        public PolicyTypeManager(IRepository repository)
+        ILogger _logger;
+        public PolicyTypeManager(IRepository repository, ILogger logger)
         {
             _repository = repository;
+            this._logger = logger;
         }
 
         public bool Recored<T>(T obj) where T : class

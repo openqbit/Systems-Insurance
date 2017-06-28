@@ -7,17 +7,20 @@ using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using Microsoft.Practices.Unity;
 using System.Linq.Expressions;
+using OpenQbit.Insurance.Common.Utils.Logs;
 
 namespace OpenQbit.Insurance.BusinessService
 {
     public class ClaimManager : IClaimManager
     {
         IRepository _repository;
+        ILogger _logger;
 
         [InjectionConstructor]
-        public ClaimManager(IRepository repository)
+        public ClaimManager(IRepository repository, ILogger logger)
         {
             _repository = repository;
+            this._logger = logger;
         }
 
         public bool Recored<T>(T obj) where T : class
