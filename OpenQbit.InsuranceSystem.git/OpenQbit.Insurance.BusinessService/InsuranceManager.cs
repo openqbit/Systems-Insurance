@@ -21,12 +21,6 @@ namespace OpenQbit.Insurance.BusinessService
         {
             this._repository = repository;
         }
-        public bool RecoredMortorInsurance(InsuranceModel obj)
-        {
-            //Some Logics If Applicable
-            return Recored<InsuranceModel>(obj);
-        }
-
 
         public bool Recored<T>(T obj) where T : class
         {
