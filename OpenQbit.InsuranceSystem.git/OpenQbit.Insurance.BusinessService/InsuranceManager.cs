@@ -23,11 +23,17 @@ namespace OpenQbit.Insurance.BusinessService
             this._logger = logger;
         }
 
+        public bool RecordReInsurance(InsuranceModel insurance)
+        {
+            return Recored<InsuranceModel>(insurance);
+        }
+
         public bool Recored<T>(T obj) where T : class
         {
             //Some Logics If Applicable
             return _repository.Create(obj);
         }
+
 
         public bool Delete<T>(T obj) where T : class
         {
