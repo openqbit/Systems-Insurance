@@ -38,6 +38,11 @@ namespace OpenQbit.Insurance.BusinessService
             return Recored<InsuranceModel>(obj);
         }
 
+        public bool RecordLifeInsurance(InsuranceModel insurance)
+        {
+            return Recored<InsuranceModel>(insurance);
+        }
+
         public bool Recored<T>(T obj) where T : class
         {           
             //Some Logics If Applicable
