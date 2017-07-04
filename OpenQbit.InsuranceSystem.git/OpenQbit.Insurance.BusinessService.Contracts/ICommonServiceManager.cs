@@ -6,7 +6,7 @@ namespace OpenQbit.Insurance.BusinessService.Contracts
 {
     public interface ICommonServiceManager
     {
-        bool Recored<T>(T obj) where T : class;
+        bool Record<T>(T obj) where T : class;
         bool Update<T>(T obj) where T : class;
         bool Delete<T>(T obj) where T : class;
         List<T> GetAll<T>() where T : class;
