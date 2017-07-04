@@ -19,7 +19,7 @@ namespace OpenQbit.Insurance.BusinessService
             _repository = repository;
         }
 
-        public bool Recored<T>(T obj) where T : class
+        public bool Record<T>(T obj) where T : class
         {
             //Some Logics If Applicable
             return _repository.Create(obj);
