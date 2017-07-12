@@ -12,7 +12,6 @@ namespace OpenQbit.Insurance.Common.Models
         {
             CIGARETTES, CIGARS, OTHERS
         }
-
         public String Occupation { get; set; }
         public double AnnualIncome { get; set; }
         public double NetWorth { get; set; }
