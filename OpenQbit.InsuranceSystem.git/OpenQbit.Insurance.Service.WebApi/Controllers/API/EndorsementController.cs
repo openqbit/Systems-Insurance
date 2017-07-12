@@ -21,7 +21,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
         public HttpResponseMessage Post(ApiEndorsementModel accident)
         {
-            if (_endorsementManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_endorsementManager.Record(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 

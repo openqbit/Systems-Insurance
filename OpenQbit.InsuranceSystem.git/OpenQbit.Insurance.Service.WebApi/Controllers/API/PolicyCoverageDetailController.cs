@@ -15,7 +15,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         IPolicyCoverageDetailManager _policyManager = UnityResolver.Resolve<IPolicyCoverageDetailManager>();
         public HttpResponseMessage Post(ApiPolicyCoverageDetailModel accident)
         {
-            if (_policyManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_policyManager.Record(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 

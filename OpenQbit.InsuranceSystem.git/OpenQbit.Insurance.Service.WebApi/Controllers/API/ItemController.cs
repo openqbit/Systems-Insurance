@@ -16,7 +16,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         IItemManager _itemManager = UnityResolver.Resolve<IItemManager>();
         public HttpResponseMessage Post(ApiItemModel item)
         {
-            if (_itemManager.Recored(item)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_itemManager.Record(item)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 

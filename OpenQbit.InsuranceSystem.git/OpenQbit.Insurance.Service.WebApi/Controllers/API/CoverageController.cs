@@ -18,7 +18,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
         public HttpResponseMessage Post(ApiCoverageModel accident)
         {
-            if (_coverageManager.Recored(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_coverageManager.Record(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 

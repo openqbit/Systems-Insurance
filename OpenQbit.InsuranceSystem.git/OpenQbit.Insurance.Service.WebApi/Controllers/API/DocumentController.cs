@@ -17,7 +17,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
         public HttpResponseMessage Post(ApiDocumentModel document)
         {
-            if (_documentManager.Recored(document)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_documentManager.Record(document)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 

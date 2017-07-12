@@ -17,7 +17,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         IAgentManager _agentManager = UnityResolver.Resolve<IAgentManager>();
         public HttpResponseMessage Post(ApiPaymentModel payment)
         {
-            if (_paymentManager.Recored(payment)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_paymentManager.Record(payment)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
