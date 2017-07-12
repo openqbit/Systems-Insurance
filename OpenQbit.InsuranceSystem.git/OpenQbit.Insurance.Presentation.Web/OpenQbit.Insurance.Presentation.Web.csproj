@@ -247,6 +247,7 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\_System_User_Layout.cshtml" />
     <Content Include="Views\Insurance\Index.cshtml" />
+    <Content Include="Views\Shared\_Admin_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
