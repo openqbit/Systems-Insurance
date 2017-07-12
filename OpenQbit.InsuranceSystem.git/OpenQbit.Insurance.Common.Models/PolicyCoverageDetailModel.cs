@@ -19,11 +19,6 @@ namespace OpenQbit.Insurance.Common.Models
 
         public virtual InsuranceModel Insurance { get; set; }
         public virtual CoverageModel Coverage { get; set; }
-        public virtual ICollection<ItemModel> ItemList { get; set; }
-        public virtual ICollection<EndorsementModel> EndorsementList { get; set; }
-        public virtual ICollection<PaymentModel> PaymentList { get; set; }
-        public virtual ICollection<ClaimModel> ClaimList { get; set; }
-
 
     }
 }

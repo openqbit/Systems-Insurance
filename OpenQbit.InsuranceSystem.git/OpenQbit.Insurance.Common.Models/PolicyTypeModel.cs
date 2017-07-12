@@ -16,7 +16,6 @@ namespace OpenQbit.Insurance.Common.Models
         public int ID { get; set; }
         public PolicyTypes Type { get; set; }
         public List<String> Eligibilities { get; set; }
-        public ICollection<CoverageModel> coverages { get; set; }
     }
 
 

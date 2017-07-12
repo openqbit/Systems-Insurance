@@ -10,6 +10,5 @@ namespace OpenQbit.Insurance.Common.Models
         public DateTime Joining_Date { get; set; }
         public DateTime End_Date { get; set; }
         public Decimal Total_Value { get; set; }
-        public virtual DocumentModel document { get; set; }
     }
 }
