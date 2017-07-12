@@ -42,18 +42,25 @@
   <ItemGroup>
     <Compile Include="AccidentValueEstimationModel.cs" />
     <Compile Include="AgentModel.cs" />
+    <Compile Include="BeneficiaryModel.cs" />
     <Compile Include="ClaimModel.cs" />
     <Compile Include="ClientModel.cs" />
     <Compile Include="CoverageModel.cs" />
     <Compile Include="DocumentModel.cs" />
     <Compile Include="EndorsementModel.cs" />
+    <Compile Include="FireInsuranceModel.cs" />
     <Compile Include="InsuranceModel.cs" />
     <Compile Include="ItemModel.cs" />
+    <Compile Include="LifeInsuranceBeneficiaryModel.cs" />
+    <Compile Include="LifeInsuranceModel.cs" />
+    <Compile Include="MarineInsuranceModel.cs" />
+    <Compile Include="MotorInsuranceModel.cs" />
     <Compile Include="PaymentModel.cs" />
     <Compile Include="PolicyCoverageDetailModel.cs" />
     <Compile Include="PolicyCoverageDetailsModel.cs" />
     <Compile Include="PolicyTypeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReInsuranceModel.cs" />
     <Compile Include="TestClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
