@@ -55,6 +55,12 @@
     <Compile Include="IPolicyTypeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenQbit.Insurance.Common.Models\OpenQbit.Insurance.Common.Models.csproj">
+      <Project>{38ec820b-2d06-4ade-a820-e9aca2507e66}</Project>
+      <Name>OpenQbit.Insurance.Common.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

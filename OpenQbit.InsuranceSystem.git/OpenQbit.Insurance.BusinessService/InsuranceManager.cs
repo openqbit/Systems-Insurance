@@ -23,11 +23,19 @@ namespace OpenQbit.Insurance.BusinessService
             this._repository = repository;
         }
 
+        //Record Insurance
+        public bool Record(InsuranceModel insurance, ClientModel client)
+        {
+            throw new NotImplementedException();
+        }
+
+
         public bool Record<T>(T obj) where T : class
         {           
-            
             return _repository.Create(obj);
         }
+
+        
 
         public bool Delete<T>(T obj) where T : class
         {
@@ -64,5 +72,7 @@ namespace OpenQbit.Insurance.BusinessService
         {
             return _repository.Save();
         }
+
+        
     }
 }

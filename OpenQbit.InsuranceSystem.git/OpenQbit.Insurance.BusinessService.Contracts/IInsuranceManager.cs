@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQbit.Insurance.Common.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace OpenQbit.Insurance.BusinessService.Contracts
 {
     public interface IInsuranceManager : ICommonServiceManager
     {
-
+        
+        bool Record(InsuranceModel insurance,ClientModel client);
     }
 }

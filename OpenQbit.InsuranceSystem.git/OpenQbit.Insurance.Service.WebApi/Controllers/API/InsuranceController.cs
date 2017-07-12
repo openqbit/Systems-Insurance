@@ -8,6 +8,8 @@ using System.Web.Http;
 using OpenQbit.Insurance.Common.Ioc;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using Microsoft.Practices.Unity;
+using OpenQbit.Insurance.Common.Models;
+using OpenQbit.Insurance.Service.WebApi.Models.API.Contracts;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
@@ -17,7 +19,36 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
         public HttpResponseMessage Post(ApiInsuranceModel insurance)
         {
-            if (_insuranceManager.Record(insurance)) return new HttpResponseMessage(HttpStatusCode.OK);
+            InsuranceModel recording = new InsuranceModel() {
+                AgentID = insurance.AgentID,
+                ClientID = insurance.Client.ID,
+                ID = insurance.ID,
+                End_Date = insurance.End_Date,
+                Joining_Date = insurance.Joining_Date,
+                Total_Value = insurance.Total_Value
+            };
+
+
+            ApiClientModel insuranceClient = insurance.Client;
+
+            ClientModel client = new ClientModel() {
+                ID = insuranceClient.ID,
+                First_Name = insuranceClient.First_Name,
+                Last_Name = insuranceClient.Last_Name,
+                Address = insuranceClient.Address,
+                Date_of_Birth = insuranceClient.Date_of_Birth,
+                Age = insuranceClient.Age,
+                BloodGroup = (ClientModel.BloodGroups)insuranceClient.BloodGroup,
+                Email = insuranceClient.Email,
+                Gender = (ClientModel.Genders)insuranceClient.Gender,
+                Middle_Name = insuranceClient.Middle_Name,
+                Mobile = insuranceClient.Mobile,
+                Nationality = insuranceClient.Nationality,
+                Religion = insuranceClient.Religion,
+                Telephone = insuranceClient.Telephone
+            };
+            
+            if (_insuranceManager.Record(recording,client)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
