@@ -17,7 +17,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers
 
         public HttpResponseMessage Post(ApiAgentModel agent)
         {
-            if (_agentManager.Recored(agent)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_agentManager.Record(agent)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);  
         }
 

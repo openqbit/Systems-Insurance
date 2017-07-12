@@ -15,43 +15,46 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
     {
         IClientManager _clientManager = UnityResolver.Resolve<IClientManager>();
 
-        public HttpResponseMessage Post(ApiClientModel accident)
+        public HttpResponseMessage Post(ApiClientModel client)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_clientManager.Record(client)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public HttpResponseMessage Put(ApiClientModel accident)
+        public HttpResponseMessage Put(ApiClientModel client)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK); ;
+            if (_clientManager.Update(client)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public HttpResponseMessage Delete(int? ID)
+        public HttpResponseMessage Delete(ApiClientModel client)
         {
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_clientManager.Delete(client)) return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public ApiClientModel Get(int? ID)
+        public ApiClientModel Get(ApiClientModel client)
         {
             //ApiClientModel client = new ApiClientModel
             //{
-                //ID = (int)ID,
-                //First_Name = "Pahansith",
-                //Middle_Name = "Wijesinghe",
-                //Last_Name = "Gunathilake",
-                //Age = 25,
-                //BloodGroup = ApiClientModel.BloodGroups.O_pos,
-                //Gender = ApiClientModel.Genders.MALE,
-                //Nationality = "Sinhala",
-                //Religion = "Buddhism",
-                //Address = "Matara",
-                //Date_of_Birth = new DateTime(1992, 02, 29),
-                //Email = "pahansith.wsg@gmail.com",
-                //Mobile = 0714303351,
-                //Telephone = 0415689512
+            //ID = (int)ID,
+            //First_Name = "Pahansith",
+            //Middle_Name = "Wijesinghe",
+            //Last_Name = "Gunathilake",
+            //Age = 25,
+            //BloodGroup = ApiClientModel.BloodGroups.O_pos,
+            //Gender = ApiClientModel.Genders.MALE,
+            //Nationality = "Sinhala",
+            //Religion = "Buddhism",
+            //Address = "Matara",
+            //Date_of_Birth = new DateTime(1992, 02, 29),
+            //Email = "pahansith.wsg@gmail.com",
+            //Mobile = 0714303351,
+            //Telephone = 0415689512
             //};
 
             // return client;
-            return _clientManager.Find<ApiClientModel>(e => e.ID == ID);
+            return _clientManager.Find<ApiClientModel>(e => e.ID == client.ID);
         }
 
         public List<ApiClientModel> GetList()

@@ -17,7 +17,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         
         public HttpResponseMessage Post(ApiClaimModel claim)
         {
-            if (_claimManager.Recored(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_claimManager.Record(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
