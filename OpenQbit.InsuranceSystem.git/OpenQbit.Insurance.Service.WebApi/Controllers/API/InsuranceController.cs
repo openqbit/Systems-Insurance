@@ -15,26 +15,26 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
     {
         IInsuranceManager _insuranceManager = UnityResolver.Resolve<IInsuranceManager>();
 
-        public HttpResponseMessage Post(ApiInsuranceModel accident)
+        public HttpResponseMessage Post(ApiInsuranceModel insurance)
         {
-            if (_insuranceManager.Record(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_insuranceManager.Record(insurance)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public HttpResponseMessage Put(ApiInsuranceModel accident)
+        public HttpResponseMessage Put(ApiInsuranceModel insurance)
         {
-            if (_insuranceManager.Update(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_insuranceManager.Update(insurance)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
 
         }
 
-        public HttpResponseMessage Delete(ApiInsuranceModel accident)
+        public HttpResponseMessage Delete(ApiInsuranceModel insurance)
         {
-            if (_insuranceManager.Delete(accident)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_insuranceManager.Delete(insurance)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public ApiInsuranceModel Get(ApiInsuranceModel accident)
+        public ApiInsuranceModel Get(ApiInsuranceModel insurance)
         {
             /* ApiInsuranceModel insurance = new ApiInsuranceModel
              {
@@ -48,7 +48,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
              return insurance;*/
 
-            return _insuranceManager.Find<ApiInsuranceModel>(e => e.ID == accident.ID);
+            return _insuranceManager.Find<ApiInsuranceModel>(e => e.ID == insurance.ID);
         }
 
         public List<ApiInsuranceModel> GetList()

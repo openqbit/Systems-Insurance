@@ -22,35 +22,10 @@ namespace OpenQbit.Insurance.BusinessService
         {
             this._repository = repository;
         }
-        
-        public bool RecordFireInsurance(InsuranceModel newInsurance)
-        {
-          // return _repository.Create<InsuranceModel>(newInsurance);
-           
-            return Record<InsuranceModel>(newInsurance);
-
-        }
-
-
-        public bool RecordMortorInsurance(InsuranceModel obj)
-        {
-            //Some Logics If Applicable
-            return Record<InsuranceModel>(obj);
-        }
-
-        public bool RecordLifeInsurance(InsuranceModel insurance)
-        {
-            return Record<InsuranceModel>(insurance);
-        }
-
-        public bool RecordReInsurance(InsuranceModel insurance)
-        {
-            return Record<InsuranceModel>(insurance);
-        }
 
         public bool Record<T>(T obj) where T : class
         {           
-            //Some Logics If Applicable
+            
             return _repository.Create(obj);
         }
 
