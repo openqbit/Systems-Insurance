@@ -18,6 +18,6 @@ namespace OpenQbit.Insurance.Common.Models
         public double NetWorth { get; set; }
         public bool TobbacoUsingStatus { get; set; }
         public TOBBACO_TYPES? TobbacoTypesUsing { get; set; }
-        public LifeInsuranceBeneficiary Beneficiary { get; set; }
+        public LifeInsuranceBeneficiaryModel Beneficiary { get; set; }
     }
 }
