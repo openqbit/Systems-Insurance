@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+            <div class="form-horizontal">
+
+                <div class="form-group">
+
+                    @Html.Label("userName", "User Name", new { @class = "control-label col-md-4" })
+
+                    <div class="col-md-6" style="">
+                        @Html.TextBox("userName", null,
+                       new
+                       {
+                           @required = "require",
+                           @style = "width:75%;",
+                           @class = "form-control",
+                           placeholder = "Enter user Name"
+                       })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    @Html.Label("userRole", "Role", new { @class = "control-label col-md-4" })
+
+                    <div class="col-md-6" style="">
+                        @Html.DropDownList("userRole", new SelectList(
+                          new List<Object>{
+                               new { value = 0 , text = "System User"  },
+                               new { value = 1 , text = "Guest" },
+                               new { value = 2 , text = "Admin"}
+                            },
+                            "value",
+                          "text",
+
+                           2),
+                           new
+                           {
+                               @required = "require",
+                               @style = "width:75%; ",
+                               @class = "form-control",
+                               placeholder = "password"
+                           })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    @Html.Label("userPWD", "Password", new { @class = "control-label col-md-4" })
+
+                    <div class="col-md-6" style="">
+                        @Html.Password("userPWD", null,
+                       new
+                       {
+                           @required = "require",
+                           @style = "width:75%; ",
+                           @class = "form-control",
+                           placeholder = "password"
+                       })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-default col-md-offset-8" type="submit" value="Login" style="padding-left:20px;padding-right:20px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
