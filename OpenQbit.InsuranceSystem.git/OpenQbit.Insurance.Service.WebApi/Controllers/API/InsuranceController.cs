@@ -22,7 +22,8 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         public HttpResponseMessage AddInsurance([FromBody]ApiInsuranceModel insurance)
         {
             ApiClientModel insuranceClient = insurance.Client;
-            InsuranceModel selectedInsurance =InsuranceFactory.GetInstance().GetInsuranceModel(insurance);
+            InsuranceModel selectedInsurance = InsuranceFactory.GetInstance().GetInsuranceModel(insurance);
+
             ClientModel client = new ClientModel() {
                 ID = insuranceClient.ID,
                 First_Name = insuranceClient.First_Name,
