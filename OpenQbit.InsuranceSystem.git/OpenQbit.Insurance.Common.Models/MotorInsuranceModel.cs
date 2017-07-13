@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class MotorInsuranceModel : InsuranceModel
+    public class MotorInsuranceModel : InsuranceModel
     {
     }
 }

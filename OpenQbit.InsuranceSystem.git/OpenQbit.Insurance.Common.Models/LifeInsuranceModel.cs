@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class LifeInsuranceModel : InsuranceModel
+    public class LifeInsuranceModel : InsuranceModel
     {
         public enum TOBBACO_TYPES
         {

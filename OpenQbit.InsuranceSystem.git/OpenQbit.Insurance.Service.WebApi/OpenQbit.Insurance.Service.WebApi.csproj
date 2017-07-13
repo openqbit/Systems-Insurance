@@ -236,6 +236,7 @@
     <Compile Include="Controllers\API\PolicyTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Factory\InsuranceFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,6 +250,7 @@
     <Compile Include="Models\API\ApiAgentModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
     <Compile Include="Models\API\ApiFireInsuranceModel.cs" />
+    <Compile Include="Models\API\ApiLifeInsuranceBeneficiaryModel.cs" />
     <Compile Include="Models\API\ApiLifeInsuranceModel.cs" />
     <Compile Include="Models\API\ApiMarineInsuranceModel.cs" />
     <Compile Include="Models\API\ApiMotorInsuranceModel.cs" />

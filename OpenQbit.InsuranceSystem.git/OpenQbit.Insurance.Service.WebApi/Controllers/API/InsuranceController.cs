@@ -10,6 +10,7 @@ using OpenQbit.Insurance.BusinessService.Contracts;
 using Microsoft.Practices.Unity;
 using OpenQbit.Insurance.Common.Models;
 using OpenQbit.Insurance.Service.WebApi.Models.API.Contracts;
+using OpenQbit.Insurance.Service.WebApi.Factory;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
@@ -17,20 +18,11 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
     {
         IInsuranceManager _insuranceManager = UnityResolver.Resolve<IInsuranceManager>();
 
-        public HttpResponseMessage Post(ApiInsuranceModel insurance)
+        [HttpPost]
+        public HttpResponseMessage AddInsurance([FromBody]ApiInsuranceModel insurance)
         {
-            InsuranceModel recording = new InsuranceModel() {
-                AgentID = insurance.AgentID,
-                ClientID = insurance.Client.ID,
-                ID = insurance.ID,
-                End_Date = insurance.End_Date,
-                Joining_Date = insurance.Joining_Date,
-                Total_Value = insurance.Total_Value
-            };
-
-
             ApiClientModel insuranceClient = insurance.Client;
-
+            InsuranceModel selectedInsurance =InsuranceFactory.GetInstance().GetInsuranceModel(insurance);
             ClientModel client = new ClientModel() {
                 ID = insuranceClient.ID,
                 First_Name = insuranceClient.First_Name,
@@ -48,7 +40,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
                 Telephone = insuranceClient.Telephone
             };
             
-            if (_insuranceManager.Record(recording,client)) return new HttpResponseMessage(HttpStatusCode.OK);
+            if (_insuranceManager.Record(selectedInsurance,client)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 

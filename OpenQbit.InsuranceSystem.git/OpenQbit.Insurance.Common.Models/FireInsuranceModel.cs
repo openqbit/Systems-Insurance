@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class FireInsuranceModel : InsuranceModel
+    public class FireInsuranceModel : InsuranceModel
     {
     }
 }

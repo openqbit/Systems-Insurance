@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class LifeInsuranceBeneficiaryModel : BeneficiaryModel
+    public class LifeInsuranceBeneficiaryModel : BeneficiaryModel
     {
         public enum RelationshipTypes
         {
-            Father,Mother,Cousin,Spouce,GrandMother,GrandFather
+            Father, Mother, Cousin, Spouce, GrandMother, GrandFather
         }
 
         public RelationshipTypes RelationshipForTheClient { get; set; }
+
+
+        public LifeInsuranceBeneficiaryModel(string RelationshipForTheClient) {
+            switch (RelationshipForTheClient) {
+
+            }
+        }
+
+
+        
     }
 }

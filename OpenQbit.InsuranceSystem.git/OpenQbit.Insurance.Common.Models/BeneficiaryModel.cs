@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Common.Models
 {
-    class BeneficiaryModel
+    public class BeneficiaryModel
     {
         public String BeneficiaryName { get; set; }
         public DateTime Dob { get; set; }
