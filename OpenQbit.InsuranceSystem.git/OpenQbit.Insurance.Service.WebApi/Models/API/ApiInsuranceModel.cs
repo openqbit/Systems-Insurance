@@ -21,7 +21,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Models.API
         public DateTime End_Date { get; set; }
         public Decimal Total_Value { get; set; }
         
-        public InsuranceTypes? InsuranceType { get; set; }
+        public InsuranceTypes InsuranceType { get; set; }
         public IApiInsuranceTypeModel SelectedInsurance { get; set; }
         public int AgentID { get; set; }
 

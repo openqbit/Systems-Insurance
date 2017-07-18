@@ -10,6 +10,6 @@ namespace OpenQbit.Insurance.BusinessService.Contracts
     public interface IInsuranceManager : ICommonServiceManager
     {
         
-        bool Record(InsuranceModel insurance,ClientModel client);
+        bool Record(InsuranceModel insurance,ClientModel client,PolicyCoverageDetailModel policyCoverage,DocumentModel document,CoverageModel coverage);
     }
 }

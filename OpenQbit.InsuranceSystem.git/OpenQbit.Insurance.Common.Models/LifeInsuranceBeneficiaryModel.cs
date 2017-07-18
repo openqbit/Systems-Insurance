@@ -14,15 +14,6 @@ namespace OpenQbit.Insurance.Common.Models
         }
 
         public RelationshipTypes RelationshipForTheClient { get; set; }
-
-
-        public LifeInsuranceBeneficiaryModel(string RelationshipForTheClient) {
-            switch (RelationshipForTheClient) {
-
-            }
-        }
-
-
         
     }
 }

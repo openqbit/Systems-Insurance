@@ -24,7 +24,7 @@ namespace OpenQbit.Insurance.BusinessService
         }
 
         //Record Insurance
-        public bool Record(InsuranceModel insurance, ClientModel client)
+        public bool Record(InsuranceModel insurance, ClientModel client,PolicyCoverageDetailModel policyCoverage,DocumentModel document,CoverageModel coverage)
         {
             throw new NotImplementedException();
         }

@@ -10,7 +10,7 @@ using OpenQbit.Insurance.BusinessService.Contracts;
 using Microsoft.Practices.Unity;
 using OpenQbit.Insurance.Common.Models;
 using OpenQbit.Insurance.Service.WebApi.Models.API.Contracts;
-using OpenQbit.Insurance.Service.WebApi.Factory;
+using OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
@@ -21,27 +21,16 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         [HttpPost]
         public HttpResponseMessage AddInsurance([FromBody]ApiInsuranceModel insurance)
         {
-            ApiClientModel insuranceClient = insurance.Client;
-            InsuranceModel selectedInsurance = InsuranceFactory.GetInstance().GetInsuranceModel(insurance);
+            //Mapping Api Models to Common Models
+            APIModelMapper mapper = new APIModelMapper();
 
-            ClientModel client = new ClientModel() {
-                ID = insuranceClient.ID,
-                First_Name = insuranceClient.First_Name,
-                Last_Name = insuranceClient.Last_Name,
-                Address = insuranceClient.Address,
-                Date_of_Birth = insuranceClient.Date_of_Birth,
-                Age = insuranceClient.Age,
-                BloodGroup = (ClientModel.BloodGroups)insuranceClient.BloodGroup,
-                Email = insuranceClient.Email,
-                Gender = (ClientModel.Genders)insuranceClient.Gender,
-                Middle_Name = insuranceClient.Middle_Name,
-                Mobile = insuranceClient.Mobile,
-                Nationality = insuranceClient.Nationality,
-                Religion = insuranceClient.Religion,
-                Telephone = insuranceClient.Telephone
-            };
-            
-            if (_insuranceManager.Record(selectedInsurance,client)) return new HttpResponseMessage(HttpStatusCode.OK);
+            InsuranceModel selectedInsurance = mapper.MapInsuranceTypeModel(insurance.InsuranceType,insurance,insurance.SelectedInsurance);
+            ClientModel client = mapper.MapClientModel(insurance.Client);
+            PolicyCoverageDetailModel policyCoverage =  mapper.MapPolicyCoverageDetailModel(insurance.PolicyDetails);
+            DocumentModel document = mapper.MapDocumentModel(insurance.Documents);
+            CoverageModel coverage = mapper.MapCoverage(insurance.Coverage);
+
+            if (_insuranceManager.Record(selectedInsurance,client,policyCoverage,document,coverage)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
