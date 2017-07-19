@@ -144,7 +144,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
-        public EndorsementModel MapEndorsementCommonModel(ApiEndorsementModel endorsement)
+        public EndorsementModel MapEndorsementApiModel(ApiEndorsementModel endorsement)
         {
             return new EndorsementModel()
             {
@@ -154,7 +154,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
-        public ApiFireInsuranceModel MapFireInsuranceCommonModel(FireInsuranceModel fireInsurance)
+        public ApiFireInsuranceModel MapFireInsuranceApiModel(FireInsuranceModel fireInsurance)
         {
             return new ApiFireInsuranceModel()
             {
@@ -163,7 +163,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
-        public LifeInsuranceModel MapLifeInsuranceCommonModel(ApiLifeInsuranceModel lifeInsurance)
+        public LifeInsuranceModel MapLifeInsuranceApiModel(ApiLifeInsuranceModel lifeInsurance)
         {
             return new LifeInsuranceModel()
             {
@@ -176,7 +176,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
-        public ItemModel MapItemCommonModel(ApiItemModel item)
+        public ItemModel MapItemApiModel(ApiItemModel item)
         {
             return new ItemModel()
             {
@@ -187,5 +187,50 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
                 Value = item.Value
             };
         }
+
+        public MarineInsuranceModel MapMarineInsuranceApiModel(ApiMarineInsuranceModel insurance)
+        {
+            return new MarineInsuranceModel()
+            {
+
+            };
+        }
+
+        public MotorInsuranceModel MapMotorInsuranceApiModel(ApiMotorInsuranceModel insurance)
+        {
+            return new MotorInsuranceModel()
+            {
+
+            };
+        }
+
+        public PaymentModel MapPaymentApiModel(ApiPaymentModel payment)
+        {
+            return new PaymentModel()
+            {
+                ID = payment.ID,
+                Amount = payment.Amount,
+                Date = payment.Date_and_time,
+                PolicyCoverageDetailID = payment.PolicyCoverageDetailID
+            };
+        }
+
+        public PolicyTypeModel MapPolicyTypeApiModel(ApiPolicyTypeModel policyType)
+        {
+            return new PolicyTypeModel()
+            {
+                ID = policyType.ID,
+                Eligibilities = policyType.Eligibilities,
+                //Type = (PolicyTypes)policyType.Type
+            };
+        }
+
+        public ReInsuranceModel MapReInsuranceApiModel(ApiReInsuranceModel reInsurance)
+        {
+            return new ReInsuranceModel()
+            {
+            };
+        }
+
     }
 }
