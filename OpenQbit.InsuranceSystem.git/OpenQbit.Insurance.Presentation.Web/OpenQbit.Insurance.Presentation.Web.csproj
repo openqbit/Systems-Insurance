@@ -176,12 +176,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\API\CoverageAPIModel.cs" />
-    <Compile Include="Models\API\DocumentAPIModel.cs" />
-    <Compile Include="Models\API\InsuranceAPIModel.cs" />
-    <Compile Include="Models\API\ItemAPIModel.cs" />
-    <Compile Include="Models\API\PolicyCoverageDetailAPIModel.cs" />
-    <Compile Include="Models\API\PolicyTypeAPIModel.cs" />
+    <Compile Include="Models\API\ApiInsuarance.cs" />
+    <Compile Include="Models\API\Contract\IApiInsuaranceTypeModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
