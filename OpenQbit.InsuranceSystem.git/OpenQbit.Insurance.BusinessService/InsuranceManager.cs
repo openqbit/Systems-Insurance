@@ -26,9 +26,24 @@ namespace OpenQbit.Insurance.BusinessService
         //Record Insurance
         public bool Record(InsuranceModel insurance, ClientModel client,PolicyCoverageDetailModel policyCoverage,DocumentModel document,CoverageModel coverage)
         {
+            InsuranceModel.InsuranceTypes type = insurance.InsuranceType;
+            switch (type)
+            {
+                case InsuranceModel.InsuranceTypes.MOTOR_INSURANCE:
+                    return RecordNewMotorInsurance(insurance,client,policyCoverage,document,coverage);
+                default:return false;                                      
+            }
             //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
             throw new NotImplementedException();
         }
+
+        //Business Logics for Motor Insurance
+        private bool RecordNewMotorInsurance(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage)
+        {
+            //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
+            throw new NotImplementedException();
+        }
+
 
 
         public bool Record<T>(T obj) where T : class

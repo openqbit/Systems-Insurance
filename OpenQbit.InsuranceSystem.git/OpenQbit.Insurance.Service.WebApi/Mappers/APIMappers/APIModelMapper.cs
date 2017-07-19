@@ -20,6 +20,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
                     return new LifeInsuranceModel()
                     {
                         ID = insurance.ID,
+                        InsuranceType = (InsuranceModel.InsuranceTypes)type,
                         AgentID = insurance.AgentID,
                         ClientID = insurance.Client.ID,
                         End_Date = insurance.End_Date,
