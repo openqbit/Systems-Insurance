@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenQbit.Insurance.Presentation.Web.Models.API.Contract
 {
-    interface IApiInsuaranceTypeModel
+    public interface IApiInsuaranceTypeModel
     {
     }
 }
