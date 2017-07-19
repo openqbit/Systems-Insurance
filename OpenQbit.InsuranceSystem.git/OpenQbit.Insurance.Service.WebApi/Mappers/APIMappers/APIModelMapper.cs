@@ -1,4 +1,5 @@
 ﻿using OpenQbit.Insurance.Common.Models;
+using OpenQbit.Insurance.Service.WebApi.Models;
 using OpenQbit.Insurance.Service.WebApi.Models.API;
 using OpenQbit.Insurance.Service.WebApi.Models.API.Contracts;
 using System;
@@ -116,7 +117,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
-        public AgentModel MapAgentCommonModel(ApiAgentModel agent)
+        public AgentModel MapAgentApiModel(ApiAgentModel agent)
         {
             return new AgentModel()
             {
@@ -129,6 +130,27 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
                 Email = agent.Email,
                 Mobile = agent.Mobile,
                 Telephone = agent.Telephone
+            };
+        }
+
+        public ClaimModel MapClaimApiModel(ApiClaimModel claim)
+        {
+            return new ClaimModel()
+            {
+                ID = claim.ID,
+                ClaimValue = claim.ClaimValue,
+                EstimatedDamage = claim.EstimatedDamage,
+                Note = claim.Note
+            };
+        }
+
+        public EndorsementModel MapEndorsementCommonModel(ApiEndorsementModel endorsement)
+        {
+            return new EndorsementModel()
+            {
+                ID = endorsement.ID,
+                Details = endorsement.Details,
+                PolicyCoverageDetailID = endorsement.PolicyCoverageDetailID
             };
         }
 
