@@ -180,7 +180,6 @@
     <Compile Include="Models\API\ApiAgentModel.cs" />
     <Compile Include="Models\API\ApiClaimModel.cs" />
     <Compile Include="Models\API\ApiEndorsementModel.cs" />
-    <Compile Include="Models\API\ApiInsuarance.cs" />
     <Compile Include="Models\API\ApiItemModel.cs" />
     <Compile Include="Models\API\ApiPaymentModel.cs" />
     <Compile Include="Models\API\ApiPolicyTypeModel.cs" />
@@ -192,7 +191,6 @@
     <Compile Include="Models\API\ApiInsuaranceModel.cs" />
     <Compile Include="Models\API\ApiPolicyCoverageDetailModel.cs" />
     <Compile Include="Models\API\FireInsuranceAPIModel .cs" />
-    <Compile Include="Models\API\Contracts\IApiInsuaranceTypeModel.cs" />
     <Compile Include="Models\API\LifeInsuranceAPIModel.cs" />
     <Compile Include="Models\API\LifeInsuranceBeneficiaryAPIModel.cs" />
     <Compile Include="Models\API\MarineInsuranceAPIModel.cs" />
