@@ -17,6 +17,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
                 CostOfDamage = ave.CostOfDamage,
                 DamagedParts = ave.DamagedParts,
                 Reason = ave.Reason
+                hgf;
             };
         }
 
