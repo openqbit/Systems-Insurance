@@ -105,5 +105,32 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
+        public AccidentValueEstimationModel MapAccidentValueEstimationApiModel(ApiAccidentValueEstimationModel ave)
+        {
+            return new AccidentValueEstimationModel()
+            {
+                ID = ave.ID,
+                CostOfDamage = ave.CostOfDamage,
+                DamagedParts = ave.DamagedParts,
+                Reason = ave.Reason
+            };
+        }
+
+        public AgentModel MapAgentCommonModel(ApiAgentModel agent)
+        {
+            return new AgentModel()
+            {
+                ID = agent.ID,
+                First_Name = agent.First_Name,
+                Last_Name = agent.Last_Name,
+                Age = agent.Age,
+                Date_of_Birth = agent.Date_of_Birth,
+                Address = agent.Address,
+                Email = agent.Email,
+                Mobile = agent.Mobile,
+                Telephone = agent.Telephone
+            };
+        }
+
     }
 }
