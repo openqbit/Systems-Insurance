@@ -176,6 +176,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\API\ApiAccidentValueEstimationModel.cs" />
+    <Compile Include="Models\API\ApiAgentModel.cs" />
+    <Compile Include="Models\API\ApiClaimModel.cs" />
+    <Compile Include="Models\API\ApiEndorsementModel.cs" />
+    <Compile Include="Models\API\ApiInsuarance.cs" />
+    <Compile Include="Models\API\ApiItemModel.cs" />
+    <Compile Include="Models\API\ApiPaymentModel.cs" />
+    <Compile Include="Models\API\ApiPolicyTypeModel.cs" />
+    <Compile Include="Models\API\ApiReInsuranceModel.cs" />
+    <Compile Include="Models\API\Contract\IApiInsuaranceTypeModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
     <Compile Include="Models\API\ApiCoverageModel.cs" />
     <Compile Include="Models\API\ApiDocumentModel.cs" />
