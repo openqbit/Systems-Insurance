@@ -69,6 +69,7 @@
     <Compile Include="PolicyCoverageDetailManager.cs" />
     <Compile Include="PolicyTypeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server Side Validators\ValidateAddInsurance.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

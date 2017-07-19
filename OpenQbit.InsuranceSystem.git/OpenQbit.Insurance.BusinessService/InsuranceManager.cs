@@ -9,6 +9,7 @@ using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using Microsoft.Practices.Unity;
 using OpenQbit.Insurance.Common.Models;
 using OpenQbit.Insurance.Common.Utils.Logs;
+using OpenQbit.Insurance.BusinessService.Server_Side_Validators;
 
 namespace OpenQbit.Insurance.BusinessService
 {
@@ -40,11 +41,15 @@ namespace OpenQbit.Insurance.BusinessService
         //Business Logics for Motor Insurance
         private bool RecordNewMotorInsurance(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage)
         {
+            
+            ValidateAddInsurance validation = new ValidateAddInsurance();
+            bool isCorrectAge = validation.ValidateForAge(client.Age);
+
             //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
             throw new NotImplementedException();
         }
-
-
+        
+       
 
         public bool Record<T>(T obj) where T : class
         {           
