@@ -29,13 +29,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Service.WebApi", "OpenQbit.Insurance.Service.WebApi\OpenQbit.Insurance.Service.WebApi.csproj", "{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Presentation.Web", "OpenQbit.Insurance.Presentation.Web\OpenQbit.Insurance.Presentation.Web.csproj", "{1408BBA6-8EDC-49EF-8143-60021F34A05A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{DCF8E99C-F58A-4E41-AAE8-DF6775650612}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Common.Utils.Logs", "OpenQbit.Insurance.Common.Utils.Logs\OpenQbit.Insurance.Common.Utils.Logs.csproj", "{E4F9F4B3-B414-4317-BF82-E6290E71016A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Test.TestWeb", "OpenQbit.Insurance.Test.TestWeb\OpenQbit.Insurance.Test.TestWeb.csproj", "{80765649-6378-4B2F-ABCD-DD027C52CCCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Insurance.Presentation.Web", "OpenQbit.Insurance.Presentation.Web\OpenQbit.Insurance.Presentation.Web.csproj", "{1408BBA6-8EDC-49EF-8143-60021F34A05A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,6 @@ Global
 		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E4F9F4B3-B414-4317-BF82-E6290E71016A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E4F9F4B3-B414-4317-BF82-E6290E71016A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4F9F4B3-B414-4317-BF82-E6290E71016A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -83,6 +79,10 @@ Global
 		{80765649-6378-4B2F-ABCD-DD027C52CCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80765649-6378-4B2F-ABCD-DD027C52CCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80765649-6378-4B2F-ABCD-DD027C52CCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,9 +95,9 @@ Global
 		{27D7AF17-1B0B-4ED7-8618-571BABA9C67C} = {FCB30D9F-8AEF-431F-9653-7C932A2123DF}
 		{0C353B2E-B679-463E-9C1F-010B20D2405C} = {716E425D-04EB-425D-8C57-847E3D378CBE}
 		{C2E652DB-DFE9-4A1F-ACC3-19029EF4C765} = {9268BEF3-0320-4BBD-92C7-F75E3A4ABEA4}
-		{1408BBA6-8EDC-49EF-8143-60021F34A05A} = {53E3CB7C-8A38-4BFD-8F00-76068DA6BA8E}
 		{DCF8E99C-F58A-4E41-AAE8-DF6775650612} = {716E425D-04EB-425D-8C57-847E3D378CBE}
 		{E4F9F4B3-B414-4317-BF82-E6290E71016A} = {DCF8E99C-F58A-4E41-AAE8-DF6775650612}
 		{80765649-6378-4B2F-ABCD-DD027C52CCCE} = {C132AB59-8964-4356-850C-63FA31EE4896}
+		{1408BBA6-8EDC-49EF-8143-60021F34A05A} = {53E3CB7C-8A38-4BFD-8F00-76068DA6BA8E}
 	EndGlobalSection
 EndGlobal
