@@ -70,7 +70,26 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
 
         public ApiCoverageModel MapCoverageCommonModel(CoverageModel coverage)
         {
-
+            return new ApiCoverageModel()
+            {
+                ID = coverage.ID,
+                CoverageType = coverage.CoverageType,
+                conditions = coverage.Conditions,
+                Includes = coverage.Includes
+            };
         }
+
+        public ApiDocumentModel MapDocumentCommonModel(DocumentModel document)
+        {
+            return new ApiDocumentModel()
+            {
+                ID = document.ID,
+                Document = document.Document,
+                Authuorization = document.Authuorization,
+                InsuranceID = document.InsuranceID
+            };
+        }
+
+
     }
 }
