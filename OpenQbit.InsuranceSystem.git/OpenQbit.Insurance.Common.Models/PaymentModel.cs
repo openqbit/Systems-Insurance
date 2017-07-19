@@ -11,7 +11,7 @@ namespace OpenQbit.Insurance.Common.Models
     {
         public int ID { get; set; }
         public double Amount { get; set; }
-        public String Date { get; set; }
+        public string Date { get; set; }
 
         public int PolicyCoverageDetailID { get; set; }
 

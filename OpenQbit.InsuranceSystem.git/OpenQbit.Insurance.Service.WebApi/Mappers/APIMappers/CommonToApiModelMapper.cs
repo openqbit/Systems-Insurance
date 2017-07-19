@@ -1,4 +1,5 @@
 ﻿using OpenQbit.Insurance.Common.Models;
+using OpenQbit.Insurance.Service.WebApi.Models;
 using OpenQbit.Insurance.Service.WebApi.Models.API;
 using System;
 using System.Collections.Generic;
@@ -90,6 +91,116 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
+        public ApiEndorsementModel MapEndorsementCommonModel(EndorsementModel endorsement)
+        {
+            return new ApiEndorsementModel()
+            {
+                ID = endorsement.ID,
+                Details = endorsement.Details,
+                PolicyCoverageDetailID = endorsement.PolicyCoverageDetailID                
+            };
+        }
 
+        public ApiFireInsuranceModel MapFireInsuranceCommonModel(FireInsuranceModel fireInsurance)
+        {
+            return new ApiFireInsuranceModel()
+            {
+                
+
+            };
+        }
+
+        public ApiLifeInsuranceModel MapLifeInsuranceCommonModel(LifeInsuranceModel lifeInsurance)
+        {
+            return new ApiLifeInsuranceModel()
+            {
+                AnnualIncome = lifeInsurance.AnnualIncome,
+                Beneficiary = MapLifeInsuranceBeneficiaryCommonModel(lifeInsurance.Beneficiary),
+                NetWorth = lifeInsurance.NetWorth,
+                Occupation = lifeInsurance.Occupation,
+                TobbacoTypesUsing = (ApiLifeInsuranceModel.TOBBACO_TYPES)lifeInsurance.TobbacoTypesUsing,
+                TobbacoUsingStatus = lifeInsurance.TobbacoUsingStatus
+            };
+        }
+
+        public ApiLifeInsuranceBeneficiaryModel MapLifeInsuranceBeneficiaryCommonModel(LifeInsuranceBeneficiaryModel beneficiary)
+        {
+            return new ApiLifeInsuranceBeneficiaryModel()
+            {
+                BeneficiaryName = beneficiary.BeneficiaryName,
+                Dob = beneficiary.Dob,
+                NIC = beneficiary.NIC,
+                RelationshipForTheClient = (ApiLifeInsuranceBeneficiaryModel.RelationshipTypes)beneficiary.RelationshipForTheClient
+            };
+        }
+
+        public ApiItemModel MapItemCommonModel(ItemModel item)
+        {
+            return new ApiItemModel()
+            {
+                ID = item.ID,
+                Name = item.Name,
+                Brand = item.Brand,
+                PolicyCoverageDetailID = item.PolicyCoverageDetailID,
+                Value = item.Value
+            };
+        }
+
+        public ApiMarineInsuranceModel MapMarineInsuranceCommonModel(MarineInsuranceModel insurance)
+        {
+            return new ApiMarineInsuranceModel()
+            {
+                
+            };
+        }
+
+        public ApiMotorInsuranceModel MapMotorInsuranceCommonModel(MotorInsuranceModel insurance)
+        {
+            return new ApiMotorInsuranceModel()
+            {
+
+            };
+        }
+
+        public ApiPaymentModel MapPaymentCommonModel(PaymentModel payment)
+        {
+            return new ApiPaymentModel()
+            {
+                ID = payment.ID,
+                Amount = payment.Amount,
+                Date_and_time = payment.Date,
+                PolicyCoverageDetailID = payment.PolicyCoverageDetailID
+            };
+        }
+
+        public ApiPolicyCoverageDetailModel MapPolicyCoverageDetailCommonModel(PolicyCoverageDetailModel coverage)
+        {
+            return new ApiPolicyCoverageDetailModel()
+            {
+                ID = coverage.ID,
+                CoverageID = coverage.CoverageID,
+                CoverageValue = coverage.CoverageValue,
+                InsuranceID = coverage.InsuranceID,
+                Note = coverage.Note,
+                TotalPolicyValue = coverage.TotalPolicyValue
+            };
+        }
+
+        public ApiPolicyTypeModel MapPolicyTypeCommonModel(PolicyTypeModel policyType)
+        {
+            return new ApiPolicyTypeModel()
+            {
+                ID = policyType.ID,
+                Eligibilities = policyType.Eligibilities,
+                //Type = (PolicyTypes)policyType.Type
+            };
+        }
+
+        public ApiReInsuranceModel MapReInsuranceCommonModel(ReInsuranceModel reInsurance)
+        {
+            return new ApiReInsuranceModel()
+            {
+            };
+        }
     }
 }

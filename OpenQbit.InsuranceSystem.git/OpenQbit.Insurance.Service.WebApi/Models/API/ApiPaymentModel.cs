@@ -9,7 +9,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Models.API
     {
         public int ID { get; set; }
         public double Amount { get; set; }
-        public DateTime Date_and_time { get; set; }
+        public string Date_and_time { get; set; }
 
         public int PolicyCoverageDetailID { get; set; }
 
