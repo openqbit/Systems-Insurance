@@ -16,62 +16,62 @@ namespace OpenQbit.Insurance.Presentation.Web.Controllers
             return View();
         }
 
-        public ActionResult AddInsurance(InsuranceAPIModel insurance,CoverageAPIModel coverage,DocumentAPIModel document,ItemAPIModel item,PolicyCoverageDetailAPIModel pcdm,PolicyTypeAPIModel policyType)
+        public ActionResult AddInsurance(ApiInsuranceModel apiInsurance, ApiClientModel apiClient, ApiDocumentModel apiDocument, ApiPolicyCoverageDetailModel apiPolicyCoverageDetail, ApiCoverageModel apiCoverage)
         {
-            InsuranceModel Insurancemodel = new InsuranceModel
+            ApiInsuranceModel insurance = new ApiInsuranceModel
             {
-                ID = insurance.ID,
-                AgentID = insurance.AgentID,
-                ClientID = insurance.ClientID,
-                End_Date = insurance.End_Date,
-                Joining_Date = insurance.Joining_Date,
-                Total_Value = insurance.Total_Value,
-            };
+                ID = apiInsurance.ID,
+                Joining_Date = apiInsurance.Joining_Date,
+                End_Date = apiInsurance.End_Date,
+                Total_Value = apiInsurance.Total_Value,
+                InsuranceType = apiInsurance.InsuranceType,
+                AgentID = apiInsurance.AgentID,
 
-            DocumentModel DocumentModel = new DocumentModel
-            {
-                Document = document.Document,
-                InsuranceID = document.InsuranceID,
-                Authuorization = document.Authuorization,
-                Insurance = new List<InsuranceModel>()
+                Client = new ApiClientModel
                 {
-                   Insurancemodel,
-
-                }
-            };
-
-            PolicyCoverageDetailModel pcdModel = new PolicyCoverageDetailModel
-            {
-                ID = pcdm.ID,
-                InsuranceID = Insurancemodel.ID,
-                CoverageID = coverage.ID,
-                CoverageValue = pcdm.CoverageValue,
-                TotalPolicyValue = pcdm.TotalPolicyValue,
-                Insurance = Insurancemodel,
-                Coverage = new CoverageModel
+                    ID = apiClient.ID,
+                    First_Name = apiClient.First_Name,
+                    Middle_Name = apiClient.Middle_Name,
+                    Last_Name = apiClient.Middle_Name,
+                    Age = apiClient.Age,
+                    Address = apiClient.Address,
+                    Date_of_Birth = apiClient.Date_of_Birth,
+                    Gender = apiClient.Gender,
+                    Nationality = apiClient.Nationality,
+                    Religion = apiClient.Religion,
+                    BloodGroup = apiClient.BloodGroup,
+                    Email = apiClient.Email,
+                    Mobile = apiClient.Mobile,
+                    Telephone = apiClient.Mobile,
+                },
+                
+                Documents = new ApiDocumentModel
                 {
-                    ID = coverage.ID,
-                    Conditions = coverage.Conditions,
-                    CoverageType = coverage.CoverageType,
-                    Includes = coverage.Includes,
-                    PolicyTypes = new PolicyTypeModel
-                    {
-                        ID = policyType.ID,
-                        //policy type
-                        Eligibilities = policyType.Eligibilities,
-                    }
-                }
-            };
-            ItemModel ItemModel = new ItemModel
-            {
-                ID = item.ID,
-                Brand = item.Brand,
-                Name = item.Name,
-                PolicyCoverageDetail = pcdModel,
-                PolicyCoverageDetailID = pcdModel.ID
-            };
+                    ID = apiDocument.ID,
+                    InsuranceID = apiDocument.InsuranceID,
+                    Authuorization = apiDocument.Authuorization,
+                    Document = apiDocument.Document,
+                },
 
+                PolicyDetails=new ApiPolicyCoverageDetailModel
+                {
+                    ID = apiPolicyCoverageDetail.ID,
+                    CoverageValue = apiPolicyCoverageDetail.CoverageValue,
+                    TotalPolicyValue = apiPolicyCoverageDetail.TotalPolicyValue,
+                    Note = apiPolicyCoverageDetail.Note,
+                    InsuranceID  = apiPolicyCoverageDetail.InsuranceID,
+                    CoverageID = apiPolicyCoverageDetail.CoverageID,
+                },
+                
+                Coverage = new ApiCoverageModel
+                {
+                    ID = apiCoverage.ID,
+                    CoverageType = apiCoverage.CoverageType,
+                    Includes = apiCoverage.Includes,
+                    conditions = apiCoverage.conditions,
+                },
 
+            };
             return View();
         }
    }
