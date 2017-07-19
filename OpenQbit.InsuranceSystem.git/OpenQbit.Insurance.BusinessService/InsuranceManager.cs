@@ -32,8 +32,19 @@ namespace OpenQbit.Insurance.BusinessService
             {
                 case InsuranceModel.InsuranceTypes.MOTOR_INSURANCE:
                     return RecordNewMotorInsurance(insurance,client,policyCoverage,document,coverage);
+                case InsuranceModel.InsuranceTypes.LIFE_INSURANCE:
+                    return RecordNewLifeInsurance(insurance, client, policyCoverage, document, coverage);
                 default:return false;                                      
             }
+            //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
+            throw new NotImplementedException();
+        }
+
+        //Business Logics for Life Insurance
+        private bool RecordNewLifeInsurance(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage)
+        {
+            ValidateAddInsurance validation = new ValidateAddInsurance();
+            bool isCorrectAge = validation.ValidateForAge(client.Age);
             //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
             throw new NotImplementedException();
         }
@@ -49,15 +60,13 @@ namespace OpenQbit.Insurance.BusinessService
             throw new NotImplementedException();
         }
         
-       
 
+        // Genric Methods Start from Here
         public bool Record<T>(T obj) where T : class
         {           
             return _repository.Create(obj);
         }
-
         
-
         public bool Delete<T>(T obj) where T : class
         {
             //Some Logics If Applicable
@@ -88,6 +97,7 @@ namespace OpenQbit.Insurance.BusinessService
             //Some Logics If Applicable
             return _repository.Update(obj);
         }
+
 
         public bool Save()
         {
