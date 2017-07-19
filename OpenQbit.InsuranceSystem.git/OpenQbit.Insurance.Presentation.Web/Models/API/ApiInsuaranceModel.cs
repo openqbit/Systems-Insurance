@@ -1,9 +1,8 @@
-﻿using OpenQbit.Insurance.Presentation.Web.Models.API.Contract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using OpenQbit.Insurance.Presentation.Web.Models.API.Contract;
 namespace OpenQbit.Insurance.Presentation.Web.Models.API
 {
     public class ApiInsuranceModel
@@ -22,7 +21,7 @@ namespace OpenQbit.Insurance.Presentation.Web.Models.API
         public Decimal Total_Value { get; set; }
 
         public InsuranceTypes InsuranceType { get; set; }
-        public IApiInsuranceTypeModel SelectedInsurance { get; set; }
+        public IApiInsuaranceTypeModel SelectedInsurance { get; set; }
         public int AgentID { get; set; }
 
         public ApiClientModel Client { get; set; }
