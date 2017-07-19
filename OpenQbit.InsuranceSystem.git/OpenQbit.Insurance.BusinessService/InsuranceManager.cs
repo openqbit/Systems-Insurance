@@ -26,6 +26,7 @@ namespace OpenQbit.Insurance.BusinessService
         //Record Insurance
         public bool Record(InsuranceModel insurance, ClientModel client,PolicyCoverageDetailModel policyCoverage,DocumentModel document,CoverageModel coverage)
         {
+            //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
             throw new NotImplementedException();
         }
 
