@@ -17,7 +17,6 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
                 CostOfDamage = ave.CostOfDamage,
                 DamagedParts = ave.DamagedParts,
                 Reason = ave.Reason,
-                "New",
             };
         }
 
@@ -67,6 +66,11 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
                 Religion = client.Religion,
                 Telephone = client.Telephone
             };
+        }
+
+        public ApiCoverageModel MapCoverageCommonModel(CoverageModel coverage)
+        {
+
         }
     }
 }
