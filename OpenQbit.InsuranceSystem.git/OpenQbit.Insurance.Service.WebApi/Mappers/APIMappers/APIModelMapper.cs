@@ -154,5 +154,38 @@ namespace OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers
             };
         }
 
+        public ApiFireInsuranceModel MapFireInsuranceCommonModel(FireInsuranceModel fireInsurance)
+        {
+            return new ApiFireInsuranceModel()
+            {
+
+
+            };
+        }
+
+        public LifeInsuranceModel MapLifeInsuranceCommonModel(ApiLifeInsuranceModel lifeInsurance)
+        {
+            return new LifeInsuranceModel()
+            {
+                AnnualIncome = lifeInsurance.AnnualIncome,
+                Beneficiary = MapBeneficiaryModel(lifeInsurance.Beneficiary),
+                NetWorth = lifeInsurance.NetWorth,
+                Occupation = lifeInsurance.Occupation,
+                TobbacoTypesUsing = (LifeInsuranceModel.TOBBACO_TYPES)lifeInsurance.TobbacoTypesUsing,
+                TobbacoUsingStatus = lifeInsurance.TobbacoUsingStatus
+            };
+        }
+
+        public ItemModel MapItemCommonModel(ApiItemModel item)
+        {
+            return new ItemModel()
+            {
+                ID = item.ID,
+                Name = item.Name,
+                Brand = item.Brand,
+                PolicyCoverageDetailID = item.PolicyCoverageDetailID,
+                Value = item.Value
+            };
+        }
     }
 }
