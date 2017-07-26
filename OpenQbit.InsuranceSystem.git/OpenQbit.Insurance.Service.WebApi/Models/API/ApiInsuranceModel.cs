@@ -1,4 +1,4 @@
-﻿using OpenQbit.Insurance.
+﻿
 using OpenQbit.Insurance.Service.WebApi.Models.API.Contracts;
 using System;
 using System.Collections.Generic;

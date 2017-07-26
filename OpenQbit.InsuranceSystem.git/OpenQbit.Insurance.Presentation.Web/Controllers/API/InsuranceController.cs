@@ -16,6 +16,7 @@ namespace OpenQbit.Insurance.Presentation.Web.Controllers
             return View();
         }
 
+        
         public ActionResult AddInsurance(ApiInsuranceModel apiInsurance, ApiClientModel apiClient, ApiDocumentModel apiDocument, ApiPolicyCoverageDetailModel apiPolicyCoverageDetail, ApiCoverageModel apiCoverage)
         {
             ApiInsuranceModel insurance = new ApiInsuranceModel

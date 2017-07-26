@@ -5,6 +5,8 @@ using System.Web;
 using System.Net.Http;
 using System.Web.Script.Serialization;
 using System.Threading.Tasks;
+using OpenQbit.Insurance.Presentation.Web.Models.API;
+
 
 
 namespace OpenQbit.Insurance.Presentation.Web.WebApi
@@ -19,39 +21,39 @@ namespace OpenQbit.Insurance.Presentation.Web.WebApi
             _client = new HttpClient();
         }
 
-        public async Task<> GetCustomer()
+        public async Task<ApiInsuranceModel> GetInsurance()
         {
-            APICustomer customer = new APICustomer();
+            ApiInsuranceModel insurance = new ApiInsuranceModel();
 
             using (var response = await _client.GetAsync("http://localhost:1562/api/Customer/1"))
             {
                 if (response.IsSuccessStatusCode)
                 {
                     string jsonString = await response.Content.ReadAsStringAsync();
-                    customer = _jsonSerializer.Deserialize<APICustomer>(jsonString);
+                    insurance = _jsonSerializer.Deserialize<ApiInsuranceModel>(jsonString);
                 }
             }
 
 
-            return customer;
+            return insurance;
 
         }
 
-        public async Task<List<APICustomer>> GetCustomerList()
+        public async Task<List<ApiInsuranceModel>> GetInsuranceList()
         {
-            List<APICustomer> customer = new List<APICustomer>();
+            List<ApiInsuranceModel> insurances = new List<ApiInsuranceModel>();
 
             using (var response = await _client.GetAsync("http://localhost:1562/api/Customer/"))
             {
                 if (response.IsSuccessStatusCode)
                 {
                     string jsonString = await response.Content.ReadAsStringAsync();
-                    customer = _jsonSerializer.Deserialize<List<APICustomer>>(jsonString);
+                    insurances = _jsonSerializer.Deserialize<List<ApiInsuranceModel>>(jsonString);
                 }
             }
 
 
-            return customer;
+            return insurances;
 
         }
     }
