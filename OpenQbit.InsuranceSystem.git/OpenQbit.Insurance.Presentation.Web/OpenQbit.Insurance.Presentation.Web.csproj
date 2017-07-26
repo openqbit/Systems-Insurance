@@ -184,6 +184,7 @@
     <Compile Include="Models\API\ApiPaymentModel.cs" />
     <Compile Include="Models\API\ApiPolicyTypeModel.cs" />
     <Compile Include="Models\API\ApiReInsuranceModel.cs" />
+    <Compile Include="Models\API\Contract\ApiClientModelsController.cs" />
     <Compile Include="Models\API\Contract\IApiInsuaranceTypeModel.cs" />
     <Compile Include="Models\API\ApiClientModel.cs" />
     <Compile Include="Models\API\ApiCoverageModel.cs" />
@@ -262,6 +263,11 @@
     <Content Include="Views\Shared\_System_User_Layout.cshtml" />
     <Content Include="Views\Insurance\Index.cshtml" />
     <Content Include="Views\Shared\_Admin_Layout.cshtml" />
+    <Content Include="Views\ApiClientModels\Create.cshtml" />
+    <Content Include="Views\ApiClientModels\Delete.cshtml" />
+    <Content Include="Views\ApiClientModels\Details.cshtml" />
+    <Content Include="Views\ApiClientModels\Edit.cshtml" />
+    <Content Include="Views\ApiClientModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

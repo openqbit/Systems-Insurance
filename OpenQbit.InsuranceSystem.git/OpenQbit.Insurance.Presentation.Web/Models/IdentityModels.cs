@@ -29,5 +29,7 @@ namespace OpenQbit.Insurance.Presentation.Web.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<OpenQbit.Insurance.Presentation.Web.Models.API.ApiClientModel> ApiClientModels { get; set; }
     }
 }
