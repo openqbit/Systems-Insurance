@@ -126,13 +126,63 @@
         <div class="form-group">
             <h5 class="col-sm-2 control-label">Policy Type</h5>
             <div class="col-sm-10">
-                <select class="form-control"> 
-                    <option>--Select</option>
+                <select class="form-control" onchange="checkInsurance()" id="combo-InsuranceType-Select"> 
+                    <option>LIFE INSURANCE</option>
+                    <option>MOTOR INSURANCE</option>
+                    <option>MARINE INSURANCE</option>
+                    <option>FIRE INSURANCE</option>
                 </select>
             </div>
         </div>
     </div>
 </div>
+<div class="row panel panel-info" id="life-insuarance-form" style="display:none;">
+        <div class="panel-heading">
+            Place Life Isuarance
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <h5 class="col-sm-2 control-label">Occupation</h5>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txt-Occupation"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h5 class="col-sm-2 control-label">Annual Income</h5>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"  id="txt-AnnualIncome" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h5 class="col-sm-2 control-label">NetWorth</h5>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txt-NetWorth" />
+                    </div>
+                </div>
+                <div class="form-group" style="margin-left:9px;">
+                    <h5 class="col-sm-2 control-label">Tobbaco Using Status</h5>
+                    <select class="form-control" id="combo-TobacoStatus" onchange="check()">
+                        <option>None Using</option>
+                        <option>Using</option>
+                    </select>
+                </div>
+                <div class="form-group" id="select-tobacoType-Div" style="margin-left:190px; display:none;">
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">CIGARS</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">CIGARETTES</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">OTHERS</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 <div class="container">
     <div class="row">
         <div class="col-md-2">
@@ -207,5 +257,24 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript" >
+        function check() {
+            var selectUsing = $('#combo-TobacoStatus').val();
+            if (selectUsing === "Using") {
+                $('#select-tobacoType-Div').css('display', 'block')
+            } else {
+                $('#select-tobacoType-Div').css('display', 'none')
+            }
+        }
+
+        function checkInsurance() {
+            var r = $('#combo-InsuranceType-Select').val();
+            if (r === "LIFE INSURANCE") {
+                $('#life-insuarance-form').css('display', 'block')
+
+            }
+        }
+       
+    </script>
 </div>
 
