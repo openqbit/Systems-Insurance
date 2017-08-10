@@ -43,9 +43,12 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             
 
             ClaimModel claim = _claimManager.Find<ClaimModel>(e => e.ID.Equals(id));
-
+            AccidentValueEstimationModel ave = claim.AccidentValueEstimation;
             CommonToApiModelMapper mapper = new CommonToApiModelMapper();
-            return mapper.MapClaimCommonModel(claim);
+            ApiAccidentValueEstimationModel apiAve = mapper.MapAccidentValueEstmationCommonModel(ave);
+            ApiClaimModel apiClaim = mapper.MapClaimCommonModel(claim);
+            apiClaim.AccidentValueEstimaton = apiAve;
+            return apiClaim;
         }
 
         public List<ApiClaimModel> GetList()
