@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using OpenQbit.Insurance.Common.Models;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.Common.Ioc;
 
@@ -17,6 +17,24 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
         public HttpResponseMessage Post(ApiClientModel client)
         {
+            ClientModel c = new ClientModel
+            {
+                ID = client.ID,
+                First_Name = client.First_Name,
+                Middle_Name = client.Middle_Name,
+                Last_Name = client.Last_Name,
+                Age = client.Age,
+                Address = client.Address,
+                Date_of_Birth = client.Date_of_Birth,
+                Gender = (ClientModel.Genders) client.Gender,
+                Nationality = client.Nationality,
+                Religion = client.Religion,
+                BloodGroup = (ClientModel.BloodGroups) client.BloodGroup,
+                Email = client.Email,
+                Mobile = client.Mobile,
+                Telephone = client.Telephone
+
+            };
             if (_clientManager.Record(client)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
