@@ -28,7 +28,6 @@ namespace OpenQbit.Insurance.BusinessService
                 return _repository.Save();
             }
             return false;
-
         }
 
         public bool Delete<T>(T obj) where T : class

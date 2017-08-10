@@ -145,6 +145,24 @@ namespace OpenQbit.Insurance.BusinessService
             return _repository.Save();
         }
 
-        
+        public ClientModel FindClientForInsurance(Expression<Func<ClientModel, bool>> predicate)
+        {
+            return _repository.Find(predicate);
+        }
+
+        public DocumentModel GetDocumentForInsurance(Expression<Func<DocumentModel, bool>> predicate)
+        {
+            return _repository.Find(predicate);
+        }
+
+        public PolicyCoverageDetailModel GetPolicyCoverageDetailForInsurance(Expression<Func<PolicyCoverageDetailModel, bool>> predicate)
+        {
+            return _repository.Find(predicate);
+        }
+
+        public CoverageModel GetCoverageModelForInsurance(Expression<Func<CoverageModel, bool>> predicate)
+        {
+            return _repository.Find(predicate);
+        }
     }
 }

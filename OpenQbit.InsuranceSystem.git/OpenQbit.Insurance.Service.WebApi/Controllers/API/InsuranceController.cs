@@ -61,7 +61,8 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
              return insurance;*/
 
-            return _insuranceManager.Find<ApiInsuranceModel>(e => e.ID == insurance.ID);
+            return _insuranceManager.Find<InsuranceModel>(e => e.ID == insurance.ID);
+            
         }
 
         public List<ApiInsuranceModel> GetList()
