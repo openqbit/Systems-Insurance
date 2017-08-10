@@ -63,12 +63,20 @@ namespace OpenQbit.Insurance.BusinessService
             return _repository.Save();
         }
 
-        public bool Record(AccidentValueEstimationModel ave, AgentModel agent, ClientModel client)
+        public bool Record(AccidentValueEstimationModel ave, ClaimModel claim)
         {
-            bool isAccidentValueAdded = _repository.Create(ave);
-            if (isAccidentValueAdded)
+            bool isClaimAdded = _repository.Create(claim);
+            if (isClaimAdded)
             {
-                return _repository.Save();
+                bool isAccidentValueAdded = _repository.Create(ave);
+                if (isAccidentValueAdded)
+                {
+                    return _repository.Save();
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {

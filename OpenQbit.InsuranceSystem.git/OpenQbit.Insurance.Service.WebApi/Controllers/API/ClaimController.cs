@@ -21,8 +21,8 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         {
             APIModelMapper m = new APIModelMapper();
             AccidentValueEstimationModel accidentValueEstimation = m.MapAccidentValueEstimationApiModel(claim.AccidentValueEstimaton);
-            
-            if (_claimManager.Record(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
+            ClaimModel claimModel = m.MapClaimApiModel(claim);
+            if (_claimManager.Record(accidentValueEstimation,claimModel)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 

@@ -9,6 +9,6 @@ namespace OpenQbit.Insurance.BusinessService.Contracts
 {
     public interface IClaimManager : ICommonServiceManager
     {
-        bool Record(AccidentValueEstimationModel ave,AgentModel agent,ClientModel client);
+        bool Record(AccidentValueEstimationModel ave,ClaimModel claim);
     }
 }
