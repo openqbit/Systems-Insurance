@@ -38,19 +38,14 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public ApiClaimModel Get(ApiClaimModel claim)
+        public ApiClaimModel Get(String id)
         {
-            /*ApiClaimModel claim = new ApiClaimModel
-            {
-                ID = (int)ID,
-                ClaimValue=25000,
-                EstimatedDamage=3450,
-                Note="Damage Covered"
-            };
+            
 
-            return claim;*/
+            ClaimModel claim = _claimManager.Find<ClaimModel>(e => e.ID.Equals(id));
 
-            return _claimManager.Find<ApiClaimModel>(e => e.ID == claim.ID);
+            CommonToApiModelMapper mapper = new CommonToApiModelMapper();
+            return mapper.MapClaimCommonModel(claim);
         }
 
         public List<ApiClaimModel> GetList()
