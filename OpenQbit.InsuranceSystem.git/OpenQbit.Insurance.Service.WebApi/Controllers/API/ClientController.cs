@@ -39,28 +39,11 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public ApiClientModel Get(ApiClientModel client)
+        public ApiClientModel Get(String id)
         {
-            //ApiClientModel client = new ApiClientModel
-            //{
-            //ID = (int)ID,
-            //First_Name = "Pahansith",
-            //Middle_Name = "Wijesinghe",
-            //Last_Name = "Gunathilake",
-            //Age = 25,
-            //BloodGroup = ApiClientModel.BloodGroups.O_pos,
-            //Gender = ApiClientModel.Genders.MALE,
-            //Nationality = "Sinhala",
-            //Religion = "Buddhism",
-            //Address = "Matara",
-            //Date_of_Birth = new DateTime(1992, 02, 29),
-            //Email = "pahansith.wsg@gmail.com",
-            //Mobile = 0714303351,
-            //Telephone = 0415689512
-            //};
-
-            // return client;
-            return _clientManager.Find<ApiClientModel>(e => e.ID == client.ID);
+            ClientModel client = _clientManager.Find<ClientModel>(e => e.ID.Equals(id));
+            CommonToApiModelMapper mapper = new CommonToApiModelMapper();
+            return mapper.MapClientCommonModel(client);
         }
 
         public List<ApiClientModel> GetList()
