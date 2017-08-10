@@ -8,6 +8,8 @@ using System.Web.Http;
 
 using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.Common.Ioc;
+using OpenQbit.Insurance.Common.Models;
+using OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
@@ -17,7 +19,11 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
         public HttpResponseMessage Post(ApiClientModel client)
         {
-            if (_clientManager.Record(client)) return new HttpResponseMessage(HttpStatusCode.OK);
+
+            APIModelMapper apiModelMapper = new APIModelMapper();
+            ClientModel model=apiModelMapper.MapClientModel(client);
+
+            if (_clientManager.Record(model)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
