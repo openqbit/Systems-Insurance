@@ -6,8 +6,7 @@ using System.Net.Http;
 using System.Web.Script.Serialization;
 using System.Threading.Tasks;
 using OpenQbit.Insurance.Presentation.Web.Models.API;
-
-
+using System.Net.Http.Headers;
 
 namespace OpenQbit.Insurance.Presentation.Web.WebApi
 {
@@ -55,6 +54,18 @@ namespace OpenQbit.Insurance.Presentation.Web.WebApi
 
             return insurances;
 
+        }
+
+        // Send data to the service
+        public async Task<HttpResponseMessage> PostInsurance(ApiInsuranceModel insurance)
+        {
+
+            {
+                _client.DefaultRequestHeaders.Accept.Clear();
+                _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var response = await _client.PostAsJsonAsync<ApiInsuranceModel>(new Uri("http://localhost:51279/api/AddInsurance"), insurance);
+                return response;
+            }
         }
     }
 }
