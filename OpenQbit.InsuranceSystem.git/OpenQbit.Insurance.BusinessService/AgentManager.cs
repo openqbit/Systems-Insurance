@@ -23,7 +23,12 @@ namespace OpenQbit.Insurance.BusinessService
         public bool Record<T>(T obj) where T : class
         {
             //Some Logics If Applicable
-            return _repository.Create(obj);
+            bool isCreated = _repository.Create(obj);
+            if (isCreated) {
+                return _repository.Save();
+            }
+            return false;
+
         }
 
         public bool Delete<T>(T obj) where T : class

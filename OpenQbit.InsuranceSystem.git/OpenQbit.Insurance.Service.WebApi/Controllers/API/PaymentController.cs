@@ -8,6 +8,8 @@ using OpenQbit.Insurance.Service.WebApi.Models.API;
 using OpenQbit.Insurance.Common.Ioc;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using Microsoft.Practices.Unity; // InjectionConstructor
+using OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers;
+using OpenQbit.Insurance.Common.Models;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
@@ -18,6 +20,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         public HttpResponseMessage Post(ApiPaymentModel payment)
         {
             APIModelMapper m = new APIModelMapper();
+
             PaymentModel paymentModel = m.MapPaymentApiModel(payment);
             if (_paymentManager.Record(paymentModel)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
