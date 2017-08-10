@@ -8,6 +8,8 @@ using OpenQbit.Insurance.Service.WebApi.Models.API;
 using OpenQbit.Insurance.BusinessService.Contracts;
 using Microsoft.Practices.Unity;
 using OpenQbit.Insurance.Common.Ioc;
+using OpenQbit.Insurance.Service.WebApi.Mappers.APIMappers;
+using OpenQbit.Insurance.Common.Models;
 
 namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 {
@@ -17,6 +19,11 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         
         public HttpResponseMessage Post(ApiClaimModel claim)
         {
+            APIModelMapper m = new APIModelMapper();
+            ClientModel client = m.MapClientModel(claim.Client);
+            AgentModel agent = m.MapAgentApiModel(claim.Agent);
+            AccidentValueEstimationModel accidentValueEstimation = m.MapAccidentValueEstimationApiModel(claim.AccidentValueEstimaton);
+            
             if (_claimManager.Record(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
