@@ -37,7 +37,7 @@ namespace OpenQbit.Insurance.BusinessService
                 default:return false;                                      
             }
             //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
-            throw new NotImplementedException();
+            
         }
 
         //Business Logics for Life Insurance
@@ -45,8 +45,49 @@ namespace OpenQbit.Insurance.BusinessService
         {
             ValidateAddInsurance validation = new ValidateAddInsurance();
             bool isCorrectAge = validation.ValidateForAge(client.Age);
-            //_repository.Create(InsuranceModel insurance, ClientModel client, PolicyCoverageDetailModel policyCoverage, DocumentModel document, CoverageModel coverage);
-            throw new NotImplementedException();
+            bool isClientAdded = _repository.Create(client);
+            if (isClientAdded)
+            {
+                bool isInsuranceAdded = _repository.Create(insurance);
+                if (isInsuranceAdded)
+                {
+                    bool isDocumentAdded = _repository.Create(document);
+                    if (isDocumentAdded)
+                    {
+                        bool isCoverageAdded = _repository.Create(coverage);
+                        if (isCoverageAdded)
+                        {
+                            bool isPolicyCoverageAdded = _repository.Create(policyCoverage);
+                            if (isPolicyCoverageAdded)
+                            {
+                               return _repository.Save();
+                            }
+                            else
+                            {
+                                return false;
+                            }
+
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+           
         }
 
         //Business Logics for Motor Insurance
