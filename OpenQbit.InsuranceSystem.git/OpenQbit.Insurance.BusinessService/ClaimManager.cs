@@ -7,6 +7,7 @@ using OpenQbit.Insurance.BusinessService.Contracts;
 using OpenQbit.Insurance.DataAccess.DAL.Contracts;
 using Microsoft.Practices.Unity;
 using System.Linq.Expressions;
+using OpenQbit.Insurance.Common.Models;
 
 namespace OpenQbit.Insurance.BusinessService
 {
@@ -60,6 +61,27 @@ namespace OpenQbit.Insurance.BusinessService
         public bool Save()
         {
             return _repository.Save();
+        }
+
+        public bool Record(AccidentValueEstimationModel ave, ClaimModel claim)
+        {
+            bool isClaimAdded = _repository.Create(claim);
+            if (isClaimAdded)
+            {
+                bool isAccidentValueAdded = _repository.Create(ave);
+                if (isAccidentValueAdded)
+                {
+                    return _repository.Save();
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
