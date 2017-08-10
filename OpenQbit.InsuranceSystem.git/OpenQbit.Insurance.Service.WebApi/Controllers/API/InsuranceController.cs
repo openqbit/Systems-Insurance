@@ -47,7 +47,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
         }
 
-        public ApiInsuranceModel Get(ApiInsuranceModel insurance)
+        public ApiInsuranceModel Get(String insuranceId)
         {
             /* ApiInsuranceModel insurance = new ApiInsuranceModel
              {
@@ -61,7 +61,32 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
 
              return insurance;*/
 
-            return _insuranceManager.Find<InsuranceModel>(e => e.ID == insurance.ID);
+            InsuranceModel selectedInsurance = _insuranceManager.Find<InsuranceModel>(e => e.ID.Equals(insuranceId));
+            ClientModel clientModel = _insuranceManager.Find<ClientModel>(e => e.ID.Equals(selectedInsurance.ID));
+            DocumentModel document = _insuranceManager.Find<DocumentModel>(e => e.InsuranceID.Equals(selectedInsurance.ID));
+            PolicyCoverageDetailModel pcd =  _insuranceManager.Find<PolicyCoverageDetailModel>(e => e.InsuranceID.Equals(selectedInsurance.ID));
+            CoverageModel coverage =_insuranceManager.Find<CoverageModel>(e => e.ID.Equals(pcd.CoverageID));
+
+            CommonToApiModelMapper mapper = new CommonToApiModelMapper();
+            ApiInsuranceModel mapped = new ApiInsuranceModel();
+            if (selectedInsurance.InsuranceType.Equals(InsuranceModel.InsuranceTypes.LIFE_INSURANCE))
+            {
+                LifeInsuranceModel life =  _insuranceManager.Find<LifeInsuranceModel>(e => e.ClientID.Equals(selectedInsurance.ClientID));
+                ApiLifeInsuranceModel apiLifeInsuranceModel = mapper.MapLifeInsuranceCommonModel(life);
+                mapped.SelectedInsurance = apiLifeInsuranceModel;
+            }
+            ApiClientModel apiCLient = mapper.MapClientCommonModel(clientModel);
+            ApiDocumentModel apiDoc = mapper.MapDocumentCommonModel(document);
+            ApiPolicyCoverageDetailModel apiPcd = mapper.MapPolicyCoverageDetailCommonModel(pcd);
+            ApiCoverageModel apiCoverage = mapper.MapCoverageCommonModel(coverage);
+
+            mapped.Client = apiCLient;
+            mapped.Coverage = apiCoverage;
+            mapped.Documents = apiDoc;
+            mapped.PolicyDetails = apiPcd;
+
+            return mapped;
+
             
         }
 
