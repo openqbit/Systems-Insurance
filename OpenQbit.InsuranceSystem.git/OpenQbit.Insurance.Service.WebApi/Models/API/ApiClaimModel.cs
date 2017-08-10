@@ -13,7 +13,7 @@ namespace OpenQbit.Insurance.Service.WebApi.Models.API
         public double ClaimValue { get; set; }
         public double EstimatedDamage { get; set; }
         public string Note { get; set; }
-        public int insuranceID { get; set; }
+        public int policyCoverageDetailID { get; set; }
 
         public ApiClientModel Client { get; set; }
         public ApiAgentModel Agent { get; set; }

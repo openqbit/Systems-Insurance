@@ -20,8 +20,6 @@ namespace OpenQbit.Insurance.Service.WebApi.Controllers.API
         public HttpResponseMessage Post(ApiClaimModel claim)
         {
             APIModelMapper m = new APIModelMapper();
-            ClientModel client = m.MapClientModel(claim.Client);
-            AgentModel agent = m.MapAgentApiModel(claim.Agent);
             AccidentValueEstimationModel accidentValueEstimation = m.MapAccidentValueEstimationApiModel(claim.AccidentValueEstimaton);
             
             if (_claimManager.Record(claim)) return new HttpResponseMessage(HttpStatusCode.OK);
